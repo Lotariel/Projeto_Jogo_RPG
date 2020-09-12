@@ -20,7 +20,7 @@
                     <td>&nbsp;</td>
                     <td>
                         <asp:Label ID="Label1" runat="server" Text="Tela de Login"></asp:Label>
-						<asp:Button ID="btnLogin" runat="server" Text="Login" />
+						<asp:Button ID="btn_login" runat="server" Text="Login" />
                     </td>
                     <td>&nbsp;</td>
                 </tr>
