@@ -1,0 +1,21 @@
+﻿body {	width: 231px;
+	height: 174px;
+}
+
+Textbox {
+	align-items:center;
+}
+
+button {
+	border-radius: 10px 10px;
+}
+
+#quadroDeLogin {
+
+	border-radius: 3px 4px;
+	text-align:center;
+	background-color:;
+	width: 80px;
+	width: 176px;
+	border: 2px solid #000000;
+}
