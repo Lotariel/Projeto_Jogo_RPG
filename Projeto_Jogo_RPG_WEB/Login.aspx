@@ -21,7 +21,7 @@
 			<asp:TextBox ID="txtLogin" runat="server"></asp:TextBox> <br /> <br />
 			<asp:Label ID="lblSenha" runat="server" Text="Senha"></asp:Label> <br />
             <asp:TextBox ID="txtSenha" runat="server" Width="118px"></asp:TextBox> <br /> <br />
-			<asp:Button ID="btnLogar" runat="server" Text="Entrar" />
+			<asp:Button ID="btnLogar" runat="server" Text="Enter" />
 			<br />
 			<br />
         </fieldset>
