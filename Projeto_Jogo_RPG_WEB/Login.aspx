@@ -9,22 +9,31 @@
     <title></title>
 	<style type="text/css">
 		#frmTelaLogin {
-			width: 226px;
+			width: 182px;
 		}
 	</style>
 </head>
 <body>
-    <form id="frmTelaLogin" runat="server" align="center">
-        <fieldset id="quadroDeLogin">
-			<legend align="center">Área de login</legend>
+	<!--Tag para formar um quadro em volta do formulário de login-->
+	<fieldset id="quadroDeLogin">
+		<!--Tag para legenda do quadro de login-->
+		<legend align="center">Área de login</legend>
+		<!--Formulário de login-->
+		<form id="frmTelaLogin" runat="server" align="center">
+			<!--Label identificando à que se refere o textbox-->
 			<asp:Label ID="lblLogin" runat="server" Text="Login"></asp:Label> <br />
+			<!--TextBox destinado à entrada do login de usuário-->
 			<asp:TextBox ID="txtLogin" runat="server"></asp:TextBox> <br /> <br />
+
+			<!--
 			<asp:Label ID="lblSenha" runat="server" Text="Senha"></asp:Label> <br />
             <asp:TextBox ID="txtSenha" runat="server" Width="118px"></asp:TextBox> <br /> <br />
-			<asp:Button ID="btnLogar" runat="server" Text="Enter" />
+			-->
+
+			<!--Botão para iniciar a validação de login e inicializar a apresentação da ficha de personagem-->
+			<asp:Button ID="btnLogar" runat="server" Text="Entrar" OnClick="btnLogar_Click" />
 			<br />
-			<br />
-        </fieldset>
-    </form>
+		</form>
+	</fieldset>
 </body>
 </html>
