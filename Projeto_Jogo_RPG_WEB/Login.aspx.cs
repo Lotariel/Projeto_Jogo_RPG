@@ -6,11 +6,16 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using Projeto_Jogo_RPG_WEB.Classes;
+using System.Data.SqlClient;
 
 namespace Projeto_Jogo_RPG_WEB
 {
     public partial class Login : System.Web.UI.Page
     {
+        //Criação de uma nova instância da classe CRUD para que seja possível
+        //utilizar seus métodos
+        CRUD crud = new CRUD();
+
         //Evento de carregamento da página (realiza as ações aqui especificadas logo que a página é carregada)
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -22,8 +27,17 @@ namespace Projeto_Jogo_RPG_WEB
         {
             //Aqui será criado a validação das informações apresentadas pelo usuário com as que estão cadastradas no banco
 
-            //Variável que recebe a informação login do usuário
-            String login = txtLogin.Text;
+            //Comando condicional que verifica se o que o usuário digitou na área de login
+            //existe no banco de dadaos (chamando o objeto crud, instância da classe CRUD, e
+            //utilizando o método select()
+            if (txtLogin.Text == crud.select())
+            {
+                lblConexao.Text = "Entrou";
+            }
+            else 
+            {
+                lblConexao.Text = "Dados inválidos!";
+            }
         }
     }
 }

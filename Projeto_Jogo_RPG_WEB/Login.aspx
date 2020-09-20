@@ -32,7 +32,10 @@
 
 			<!--Botão para iniciar a validação de login e inicializar a apresentação da ficha de personagem-->
 			<asp:Button ID="btnLogar" runat="server" Text="Entrar" OnClick="btnLogar_Click" />
-			<br />
+			<br /> <br />
+
+			<!--Label que indica se a conexão foi feita com sucesso ou não-->
+			<asp:Label ID="lblConexao" runat="server" Text=" "></asp:Label>
 		</form>
 	</fieldset>
 </body>

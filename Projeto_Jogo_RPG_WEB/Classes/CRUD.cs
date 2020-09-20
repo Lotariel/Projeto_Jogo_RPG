@@ -18,9 +18,9 @@ namespace Projeto_Jogo_RPG_WEB.Classes
             //Instância de um novo objeto que recebe os comandos SQL para interação com o BD
             //Vide select que interage com a tabela login e puxa as informações de login cadastradas na tabela
             //E chama o método AbrirConexao() que realiza a conexão com o BD
-            SqlCommand select = new SqlCommand("select login from personagem", AbrirConexao());
+            SqlCommand sel = new SqlCommand("select nome from personagem", AbrirConexao());
             //Objeto que recebe método de execução de comando SQL
-            resultado = select.ExecuteScalar().ToString();
+            resultado = sel.ExecuteScalar().ToString();
             //Chamada de método que encera a conexão após executado o comando requerido
             FecharConexao();
             //Retorno de variável com o resultado do select no BD
