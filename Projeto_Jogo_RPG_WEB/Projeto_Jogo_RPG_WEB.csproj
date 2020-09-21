@@ -65,12 +65,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CSS\Estilo.css" />
+    <Content Include="Ficha.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\ConexaoBD.cs" />
     <Compile Include="Classes\CRUD.cs" />
+    <Compile Include="Ficha.aspx.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ficha.aspx.designer.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -6,12 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link href="CSS/Estilo.css" rel="stylesheet" />
-    <title></title>
-	<style type="text/css">
-		#frmTelaLogin {
-			width: 182px;
-		}
-	</style>
+    <title>Login</title>
 </head>
 <body>
 	<!--Tag para formar um quadro em volta do formulário de login-->

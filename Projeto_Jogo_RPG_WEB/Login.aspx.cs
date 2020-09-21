@@ -33,6 +33,8 @@ namespace Projeto_Jogo_RPG_WEB
             if (txtLogin.Text == crud.select())
             {
                 lblConexao.Text = "Entrou";
+                //chamada de outra página dentro do projeto (página de teste da ficha)
+                Response.Redirect("/Ficha.aspx");
             }
             else 
             {
