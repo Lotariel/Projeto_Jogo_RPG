@@ -64,12 +64,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Batalha.aspx" />
+    <Content Include="Bolsa.aspx" />
     <Content Include="CSS\Estilo.css" />
+    <Content Include="CSS\Estilos2.css" />
     <Content Include="Ficha.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="Status.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Batalha.aspx.cs">
+      <DependentUpon>Batalha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Batalha.aspx.designer.cs">
+      <DependentUpon>Batalha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bolsa.aspx.cs">
+      <DependentUpon>Bolsa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bolsa.aspx.designer.cs">
+      <DependentUpon>Bolsa.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Classes\ConexaoBD.cs" />
     <Compile Include="Classes\CRUD.cs" />
     <Compile Include="Ficha.aspx.cs">
@@ -86,9 +104,24 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Status.aspx.cs">
+      <DependentUpon>Status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Status.aspx.designer.cs">
+      <DependentUpon>Status.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MasterPage.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -96,6 +129,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Imagens\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
