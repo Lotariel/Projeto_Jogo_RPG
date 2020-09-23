@@ -118,8 +118,8 @@
                     </td>
 
                     <td style="text-align: center;">
+                        <asp:Image ID="Image1" runat="server" Height="187px" Width="135px" />
 <!-- Imagem  -->
-                        <asp:Image ID="Image1" runat="server" Height="135px" ImageUrl="~/Imagem/foto.JPG" Width="164px" align="middle" BorderColor="#CDD6DE" BorderStyle="Solid" BorderWidth="10px"/>
 <!-- endregion -->
                     </td>
 
