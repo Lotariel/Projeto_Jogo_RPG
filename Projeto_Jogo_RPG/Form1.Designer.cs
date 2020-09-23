@@ -31,6 +31,10 @@
             this.lbltitulo = new System.Windows.Forms.Label();
             this.tbc_personagem = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txt_historia = new System.Windows.Forms.TextBox();
+            this.lbl_historia = new System.Windows.Forms.Label();
+            this.txt_altua = new System.Windows.Forms.TextBox();
+            this.lbl_altura = new System.Windows.Forms.Label();
             this.lbl_peso = new System.Windows.Forms.Label();
             this.txt_peso = new System.Windows.Forms.TextBox();
             this.lbl_cabelo = new System.Windows.Forms.Label();
@@ -49,10 +53,8 @@
             this.lbl_nome = new System.Windows.Forms.Label();
             this.btn_enviar = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.lbl_altura = new System.Windows.Forms.Label();
-            this.txt_altua = new System.Windows.Forms.TextBox();
-            this.lbl_historia = new System.Windows.Forms.Label();
-            this.txt_historia = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.tbc_personagem.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -78,6 +80,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.txt_historia);
             this.tabPage1.Controls.Add(this.lbl_historia);
             this.tabPage1.Controls.Add(this.txt_altua);
@@ -106,6 +110,39 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Personagem";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // txt_historia
+            // 
+            this.txt_historia.Location = new System.Drawing.Point(10, 389);
+            this.txt_historia.Multiline = true;
+            this.txt_historia.Name = "txt_historia";
+            this.txt_historia.Size = new System.Drawing.Size(320, 128);
+            this.txt_historia.TabIndex = 20;
+            // 
+            // lbl_historia
+            // 
+            this.lbl_historia.AutoSize = true;
+            this.lbl_historia.Location = new System.Drawing.Point(7, 363);
+            this.lbl_historia.Name = "lbl_historia";
+            this.lbl_historia.Size = new System.Drawing.Size(99, 13);
+            this.lbl_historia.TabIndex = 19;
+            this.lbl_historia.Text = "Resumo da Historia";
+            // 
+            // txt_altua
+            // 
+            this.txt_altua.Location = new System.Drawing.Point(78, 327);
+            this.txt_altua.Name = "txt_altua";
+            this.txt_altua.Size = new System.Drawing.Size(100, 20);
+            this.txt_altua.TabIndex = 18;
+            // 
+            // lbl_altura
+            // 
+            this.lbl_altura.AutoSize = true;
+            this.lbl_altura.Location = new System.Drawing.Point(6, 327);
+            this.lbl_altura.Name = "lbl_altura";
+            this.lbl_altura.Size = new System.Drawing.Size(34, 13);
+            this.lbl_altura.TabIndex = 17;
+            this.lbl_altura.Text = "Altura";
             // 
             // lbl_peso
             // 
@@ -260,38 +297,23 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // lbl_altura
+            // label1
             // 
-            this.lbl_altura.AutoSize = true;
-            this.lbl_altura.Location = new System.Drawing.Point(6, 327);
-            this.lbl_altura.Name = "lbl_altura";
-            this.lbl_altura.Size = new System.Drawing.Size(34, 13);
-            this.lbl_altura.TabIndex = 17;
-            this.lbl_altura.Text = "Altura";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(373, 142);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "olavo";
             // 
-            // txt_altua
+            // label2
             // 
-            this.txt_altua.Location = new System.Drawing.Point(78, 327);
-            this.txt_altua.Name = "txt_altua";
-            this.txt_altua.Size = new System.Drawing.Size(100, 20);
-            this.txt_altua.TabIndex = 18;
-            // 
-            // lbl_historia
-            // 
-            this.lbl_historia.AutoSize = true;
-            this.lbl_historia.Location = new System.Drawing.Point(7, 363);
-            this.lbl_historia.Name = "lbl_historia";
-            this.lbl_historia.Size = new System.Drawing.Size(99, 13);
-            this.lbl_historia.TabIndex = 19;
-            this.lbl_historia.Text = "Resumo da Historia";
-            // 
-            // txt_historia
-            // 
-            this.txt_historia.Location = new System.Drawing.Point(10, 389);
-            this.txt_historia.Multiline = true;
-            this.txt_historia.Name = "txt_historia";
-            this.txt_historia.Size = new System.Drawing.Size(320, 128);
-            this.txt_historia.TabIndex = 20;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(408, 76);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "label2";
             // 
             // Form1
             // 
@@ -337,6 +359,8 @@
         private System.Windows.Forms.Label lbl_altura;
         private System.Windows.Forms.TextBox txt_historia;
         private System.Windows.Forms.Label lbl_historia;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
