@@ -73,7 +73,7 @@ namespace Projeto_Jogo_RPG.Classes
 
         public void Insert_Raca(string nome, int forca, int vit, int mag, int aur, int foc, int vel, string descricao)
         {
-            SqlCommand insert = new SqlCommand("INSERT INTO [dbo].[Racas]([NOME],[DESCRICAO],[FORCA],[VITALIDADE],[MAGIA],[AURA],[FOCO],[VELOCIDADE])  VALUES(@nome,,@des,@for,@vit,@mag,@aur,@foc,@vel)", AbrirConexao());
+            SqlCommand insert = new SqlCommand("INSERT INTO [dbo].[Racas]([NOME],[DESCRICAO],[FORCA],[VITALIDADE],[MAGIA],[AURA],[FOCO],[VELOCIDADE])  VALUES(@nome,@des,@for,@vit,@mag,@aur,@foc,@vel)", AbrirConexao());
             insert.Parameters.Add(new SqlParameter("nome", nome));
             insert.Parameters.Add(new SqlParameter("for", forca));
             insert.Parameters.Add(new SqlParameter("vit",vit));
