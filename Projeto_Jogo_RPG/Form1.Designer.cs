@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lbltitulo = new System.Windows.Forms.Label();
             this.tbc_personagem = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.cmb_classe = new System.Windows.Forms.ComboBox();
+            this.lbl_classe = new System.Windows.Forms.Label();
             this.txt_historia = new System.Windows.Forms.TextBox();
             this.lbl_historia = new System.Windows.Forms.Label();
             this.txt_altua = new System.Windows.Forms.TextBox();
@@ -53,10 +56,39 @@
             this.lbl_nome = new System.Windows.Forms.Label();
             this.btn_enviar = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btn_cadastrar = new System.Windows.Forms.Button();
+            this.txt_velraca = new System.Windows.Forms.TextBox();
+            this.txt_focoraca = new System.Windows.Forms.TextBox();
+            this.txt_auraraca = new System.Windows.Forms.TextBox();
+            this.txt_magraca = new System.Windows.Forms.TextBox();
+            this.txt_vitraca = new System.Windows.Forms.TextBox();
+            this.txt_forcaraca = new System.Windows.Forms.TextBox();
+            this.txt_nomeraca = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.racasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new Projeto_Jogo_RPG.DataSet1();
+            this.classesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.classesTableAdapter = new Projeto_Jogo_RPG.DataSet1TableAdapters.ClassesTableAdapter();
+            this.racasTableAdapter = new Projeto_Jogo_RPG.DataSet1TableAdapters.RacasTableAdapter();
+            this.racasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.txt_descricaoraca = new System.Windows.Forms.TextBox();
             this.tbc_personagem.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.racasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.classesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.racasBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbltitulo
@@ -72,16 +104,18 @@
             // 
             this.tbc_personagem.Controls.Add(this.tabPage1);
             this.tbc_personagem.Controls.Add(this.tabPage2);
+            this.tbc_personagem.Controls.Add(this.tabPage3);
             this.tbc_personagem.Location = new System.Drawing.Point(12, 53);
             this.tbc_personagem.Name = "tbc_personagem";
             this.tbc_personagem.SelectedIndex = 0;
-            this.tbc_personagem.Size = new System.Drawing.Size(776, 559);
+            this.tbc_personagem.ShowToolTips = true;
+            this.tbc_personagem.Size = new System.Drawing.Size(776, 599);
             this.tbc_personagem.TabIndex = 1;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.cmb_classe);
+            this.tabPage1.Controls.Add(this.lbl_classe);
             this.tabPage1.Controls.Add(this.txt_historia);
             this.tabPage1.Controls.Add(this.lbl_historia);
             this.tabPage1.Controls.Add(this.txt_altua);
@@ -106,14 +140,31 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(768, 533);
+            this.tabPage1.Size = new System.Drawing.Size(768, 573);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Personagem";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // cmb_classe
+            // 
+            this.cmb_classe.FormattingEnabled = true;
+            this.cmb_classe.Location = new System.Drawing.Point(78, 187);
+            this.cmb_classe.Name = "cmb_classe";
+            this.cmb_classe.Size = new System.Drawing.Size(100, 21);
+            this.cmb_classe.TabIndex = 22;
+            // 
+            // lbl_classe
+            // 
+            this.lbl_classe.AutoSize = true;
+            this.lbl_classe.Location = new System.Drawing.Point(6, 187);
+            this.lbl_classe.Name = "lbl_classe";
+            this.lbl_classe.Size = new System.Drawing.Size(38, 13);
+            this.lbl_classe.TabIndex = 21;
+            this.lbl_classe.Text = "Classe";
+            // 
             // txt_historia
             // 
-            this.txt_historia.Location = new System.Drawing.Point(10, 389);
+            this.txt_historia.Location = new System.Drawing.Point(10, 412);
             this.txt_historia.Multiline = true;
             this.txt_historia.Name = "txt_historia";
             this.txt_historia.Size = new System.Drawing.Size(320, 128);
@@ -122,7 +173,7 @@
             // lbl_historia
             // 
             this.lbl_historia.AutoSize = true;
-            this.lbl_historia.Location = new System.Drawing.Point(7, 363);
+            this.lbl_historia.Location = new System.Drawing.Point(7, 386);
             this.lbl_historia.Name = "lbl_historia";
             this.lbl_historia.Size = new System.Drawing.Size(99, 13);
             this.lbl_historia.TabIndex = 19;
@@ -130,7 +181,7 @@
             // 
             // txt_altua
             // 
-            this.txt_altua.Location = new System.Drawing.Point(78, 327);
+            this.txt_altua.Location = new System.Drawing.Point(78, 350);
             this.txt_altua.Name = "txt_altua";
             this.txt_altua.Size = new System.Drawing.Size(100, 20);
             this.txt_altua.TabIndex = 18;
@@ -138,7 +189,7 @@
             // lbl_altura
             // 
             this.lbl_altura.AutoSize = true;
-            this.lbl_altura.Location = new System.Drawing.Point(6, 327);
+            this.lbl_altura.Location = new System.Drawing.Point(6, 350);
             this.lbl_altura.Name = "lbl_altura";
             this.lbl_altura.Size = new System.Drawing.Size(34, 13);
             this.lbl_altura.TabIndex = 17;
@@ -147,7 +198,7 @@
             // lbl_peso
             // 
             this.lbl_peso.AutoSize = true;
-            this.lbl_peso.Location = new System.Drawing.Point(6, 290);
+            this.lbl_peso.Location = new System.Drawing.Point(6, 313);
             this.lbl_peso.Name = "lbl_peso";
             this.lbl_peso.Size = new System.Drawing.Size(31, 13);
             this.lbl_peso.TabIndex = 16;
@@ -156,7 +207,7 @@
             // 
             // txt_peso
             // 
-            this.txt_peso.Location = new System.Drawing.Point(78, 283);
+            this.txt_peso.Location = new System.Drawing.Point(78, 306);
             this.txt_peso.Name = "txt_peso";
             this.txt_peso.Size = new System.Drawing.Size(100, 20);
             this.txt_peso.TabIndex = 15;
@@ -164,7 +215,7 @@
             // lbl_cabelo
             // 
             this.lbl_cabelo.AutoSize = true;
-            this.lbl_cabelo.Location = new System.Drawing.Point(6, 247);
+            this.lbl_cabelo.Location = new System.Drawing.Point(6, 270);
             this.lbl_cabelo.Name = "lbl_cabelo";
             this.lbl_cabelo.Size = new System.Drawing.Size(40, 13);
             this.lbl_cabelo.TabIndex = 14;
@@ -172,14 +223,14 @@
             // 
             // txt_cabelo
             // 
-            this.txt_cabelo.Location = new System.Drawing.Point(78, 240);
+            this.txt_cabelo.Location = new System.Drawing.Point(78, 263);
             this.txt_cabelo.Name = "txt_cabelo";
             this.txt_cabelo.Size = new System.Drawing.Size(100, 20);
             this.txt_cabelo.TabIndex = 13;
             // 
             // txt_olhos
             // 
-            this.txt_olhos.Location = new System.Drawing.Point(78, 198);
+            this.txt_olhos.Location = new System.Drawing.Point(78, 221);
             this.txt_olhos.Name = "txt_olhos";
             this.txt_olhos.Size = new System.Drawing.Size(100, 20);
             this.txt_olhos.TabIndex = 12;
@@ -187,7 +238,7 @@
             // lbl_olhos
             // 
             this.lbl_olhos.AutoSize = true;
-            this.lbl_olhos.Location = new System.Drawing.Point(3, 198);
+            this.lbl_olhos.Location = new System.Drawing.Point(3, 221);
             this.lbl_olhos.Name = "lbl_olhos";
             this.lbl_olhos.Size = new System.Drawing.Size(37, 13);
             this.lbl_olhos.TabIndex = 11;
@@ -286,47 +337,239 @@
             this.btn_enviar.TabIndex = 0;
             this.btn_enviar.Text = "Cadastrar";
             this.btn_enviar.UseVisualStyleBackColor = true;
+            this.btn_enviar.Click += new System.EventHandler(this.btn_enviar_Click);
             // 
             // tabPage2
             // 
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(768, 533);
+            this.tabPage2.Size = new System.Drawing.Size(768, 573);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // tabPage3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(373, 142);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "olavo";
+            this.tabPage3.Controls.Add(this.txt_descricaoraca);
+            this.tabPage3.Controls.Add(this.btn_cadastrar);
+            this.tabPage3.Controls.Add(this.txt_velraca);
+            this.tabPage3.Controls.Add(this.txt_focoraca);
+            this.tabPage3.Controls.Add(this.txt_auraraca);
+            this.tabPage3.Controls.Add(this.txt_magraca);
+            this.tabPage3.Controls.Add(this.txt_vitraca);
+            this.tabPage3.Controls.Add(this.txt_forcaraca);
+            this.tabPage3.Controls.Add(this.txt_nomeraca);
+            this.tabPage3.Controls.Add(this.label8);
+            this.tabPage3.Controls.Add(this.label7);
+            this.tabPage3.Controls.Add(this.label6);
+            this.tabPage3.Controls.Add(this.label5);
+            this.tabPage3.Controls.Add(this.label4);
+            this.tabPage3.Controls.Add(this.label3);
+            this.tabPage3.Controls.Add(this.label2);
+            this.tabPage3.Controls.Add(this.label1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(768, 573);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Raça";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // btn_cadastrar
+            // 
+            this.btn_cadastrar.Location = new System.Drawing.Point(643, 517);
+            this.btn_cadastrar.Name = "btn_cadastrar";
+            this.btn_cadastrar.Size = new System.Drawing.Size(75, 23);
+            this.btn_cadastrar.TabIndex = 16;
+            this.btn_cadastrar.Text = "Cadastrar";
+            this.btn_cadastrar.UseVisualStyleBackColor = true;
+            this.btn_cadastrar.Click += new System.EventHandler(this.btn_cadastrar_Click);
+            // 
+            // txt_velraca
+            // 
+            this.txt_velraca.Location = new System.Drawing.Point(90, 251);
+            this.txt_velraca.Name = "txt_velraca";
+            this.txt_velraca.Size = new System.Drawing.Size(100, 20);
+            this.txt_velraca.TabIndex = 14;
+            // 
+            // txt_focoraca
+            // 
+            this.txt_focoraca.Location = new System.Drawing.Point(90, 210);
+            this.txt_focoraca.Name = "txt_focoraca";
+            this.txt_focoraca.Size = new System.Drawing.Size(100, 20);
+            this.txt_focoraca.TabIndex = 13;
+            // 
+            // txt_auraraca
+            // 
+            this.txt_auraraca.Location = new System.Drawing.Point(90, 181);
+            this.txt_auraraca.Name = "txt_auraraca";
+            this.txt_auraraca.Size = new System.Drawing.Size(100, 20);
+            this.txt_auraraca.TabIndex = 12;
+            // 
+            // txt_magraca
+            // 
+            this.txt_magraca.Location = new System.Drawing.Point(90, 145);
+            this.txt_magraca.Name = "txt_magraca";
+            this.txt_magraca.Size = new System.Drawing.Size(100, 20);
+            this.txt_magraca.TabIndex = 11;
+            // 
+            // txt_vitraca
+            // 
+            this.txt_vitraca.Location = new System.Drawing.Point(90, 110);
+            this.txt_vitraca.Name = "txt_vitraca";
+            this.txt_vitraca.Size = new System.Drawing.Size(100, 20);
+            this.txt_vitraca.TabIndex = 10;
+            // 
+            // txt_forcaraca
+            // 
+            this.txt_forcaraca.Location = new System.Drawing.Point(90, 76);
+            this.txt_forcaraca.Name = "txt_forcaraca";
+            this.txt_forcaraca.Size = new System.Drawing.Size(100, 20);
+            this.txt_forcaraca.TabIndex = 9;
+            // 
+            // txt_nomeraca
+            // 
+            this.txt_nomeraca.AcceptsTab = true;
+            this.txt_nomeraca.Location = new System.Drawing.Point(90, 27);
+            this.txt_nomeraca.Name = "txt_nomeraca";
+            this.txt_nomeraca.Size = new System.Drawing.Size(100, 20);
+            this.txt_nomeraca.TabIndex = 8;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(26, 251);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(60, 13);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Velocidade";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(26, 181);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(29, 13);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Aura";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(26, 217);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(31, 13);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Foco";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(26, 148);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(36, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Magia";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(26, 117);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Vitalidade";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(26, 83);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(34, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Força";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(408, 76);
+            this.label2.Location = new System.Drawing.Point(26, 327);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Descrição";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(26, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nome";
+            // 
+            // racasBindingSource
+            // 
+            this.racasBindingSource.DataMember = "Racas";
+            this.racasBindingSource.DataSource = this.dataSet1BindingSource;
+            // 
+            // dataSet1BindingSource
+            // 
+            this.dataSet1BindingSource.DataSource = this.dataSet1;
+            this.dataSet1BindingSource.Position = 0;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // classesBindingSource
+            // 
+            this.classesBindingSource.DataMember = "Classes";
+            this.classesBindingSource.DataSource = this.dataSet1BindingSource;
+            // 
+            // classesTableAdapter
+            // 
+            this.classesTableAdapter.ClearBeforeFill = true;
+            // 
+            // racasTableAdapter
+            // 
+            this.racasTableAdapter.ClearBeforeFill = true;
+            // 
+            // racasBindingSource1
+            // 
+            this.racasBindingSource1.DataMember = "Racas";
+            this.racasBindingSource1.DataSource = this.dataSet1BindingSource;
+            // 
+            // txt_descricaoraca
+            // 
+            this.txt_descricaoraca.AcceptsTab = true;
+            this.txt_descricaoraca.Location = new System.Drawing.Point(90, 324);
+            this.txt_descricaoraca.Multiline = true;
+            this.txt_descricaoraca.Name = "txt_descricaoraca";
+            this.txt_descricaoraca.Size = new System.Drawing.Size(355, 161);
+            this.txt_descricaoraca.TabIndex = 17;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 618);
+            this.ClientSize = new System.Drawing.Size(800, 652);
             this.Controls.Add(this.tbc_personagem);
             this.Controls.Add(this.lbltitulo);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tbc_personagem.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.racasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.classesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.racasBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -359,8 +602,33 @@
         private System.Windows.Forms.Label lbl_altura;
         private System.Windows.Forms.TextBox txt_historia;
         private System.Windows.Forms.Label lbl_historia;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cmb_classe;
+        private System.Windows.Forms.Label lbl_classe;
+        private System.Windows.Forms.BindingSource dataSet1BindingSource;
+        private DataSet1 dataSet1;
+        private System.Windows.Forms.BindingSource classesBindingSource;
+        private DataSet1TableAdapters.ClassesTableAdapter classesTableAdapter;
+        private System.Windows.Forms.BindingSource racasBindingSource;
+        private DataSet1TableAdapters.RacasTableAdapter racasTableAdapter;
+        private System.Windows.Forms.BindingSource racasBindingSource1;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Button btn_cadastrar;
+        private System.Windows.Forms.TextBox txt_velraca;
+        private System.Windows.Forms.TextBox txt_focoraca;
+        private System.Windows.Forms.TextBox txt_auraraca;
+        private System.Windows.Forms.TextBox txt_magraca;
+        private System.Windows.Forms.TextBox txt_vitraca;
+        private System.Windows.Forms.TextBox txt_forcaraca;
+        private System.Windows.Forms.TextBox txt_nomeraca;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txt_descricaoraca;
     }
 }
 
