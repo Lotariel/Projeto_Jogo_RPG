@@ -59,5 +59,11 @@ namespace Projeto_Jogo_RPG
             crud.Insert_Raca(txt_nome.Text, Convert.ToInt32(txt_focoraca.Text), Convert.ToInt32(txt_vitraca.Text), Convert.ToInt32(txt_magraca.Text), Convert.ToInt32(txt_auraraca.Text), Convert.ToInt32(txt_focoraca.Text), Convert.ToInt32(txt_velraca.Text), txt_descricaoraca.Text.ToString()); ;
             MessageBox.Show("Cadastro realizado com Sucesso");
         }
+
+        private void btn_inserir_classe_Click(object sender, EventArgs e)
+        {
+            crud.Insert_classe(txt_nome_classe.Text, Convert.ToInt32(txt_for_classe.Text), Convert.ToInt32(txt_vitalidade_classe.Text), Convert.ToInt32(txt_magia_classe.Text), Convert.ToInt32(txt_aura_classe.Text), Convert.ToInt32(txt_foco_classe.Text), Convert.ToInt32(txt_velocidade_classe.Text), txt_descricao_classe.Text, Convert.ToInt32(txt_prec_classe.Text));
+            MessageBox.Show("Cadastro realizado com Sucesso");
+        }
     }
 }

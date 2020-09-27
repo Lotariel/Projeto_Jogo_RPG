@@ -87,5 +87,22 @@ namespace Projeto_Jogo_RPG.Classes
         }
 
 
+        public void Insert_classe(string nome, int forca, int vit, int mag, int aur, int foc, int vel, string descricao, int prec)
+        {
+            SqlCommand insert = new SqlCommand("INSERT INTO [dbo].[classes]([NOME],[DESCRICAO],[FORCA],[VITALIDADE],[MAGIA],[AURA],[FOCO],[VELOCIDADE],[PRECISAO])  VALUES(@nome,@des,@for,@vit,@mag,@aur,@foc,@vel,@prec)", AbrirConexao());
+            insert.Parameters.Add(new SqlParameter("nome", nome));
+            insert.Parameters.Add(new SqlParameter("for", forca));
+            insert.Parameters.Add(new SqlParameter("vit", vit));
+            insert.Parameters.Add(new SqlParameter("mag", mag));
+            insert.Parameters.Add(new SqlParameter("aur", aur));
+            insert.Parameters.Add(new SqlParameter("foc", foc));
+            insert.Parameters.Add(new SqlParameter("vel", vel));
+            insert.Parameters.Add(new SqlParameter("des", descricao));
+            insert.Parameters.Add(new SqlParameter("prec", prec));
+            insert.ExecuteNonQuery();
+            FecharConexao();
+        }
+
+
     }
 }

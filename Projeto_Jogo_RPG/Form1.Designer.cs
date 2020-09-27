@@ -57,6 +57,7 @@
             this.btn_enviar = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.txt_descricaoraca = new System.Windows.Forms.TextBox();
             this.btn_cadastrar = new System.Windows.Forms.Button();
             this.txt_velraca = new System.Windows.Forms.TextBox();
             this.txt_focoraca = new System.Windows.Forms.TextBox();
@@ -73,6 +74,26 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.btn_inserir_classe = new System.Windows.Forms.Button();
+            this.txt_prec_classe = new System.Windows.Forms.TextBox();
+            this.lbl_precisaoclasse = new System.Windows.Forms.Label();
+            this.txt_descricao_classe = new System.Windows.Forms.TextBox();
+            this.txt_velocidade_classe = new System.Windows.Forms.TextBox();
+            this.txt_foco_classe = new System.Windows.Forms.TextBox();
+            this.txt_aura_classe = new System.Windows.Forms.TextBox();
+            this.txt_magia_classe = new System.Windows.Forms.TextBox();
+            this.txt_vitalidade_classe = new System.Windows.Forms.TextBox();
+            this.txt_for_classe = new System.Windows.Forms.TextBox();
+            this.txt_nome_classe = new System.Windows.Forms.TextBox();
+            this.lbl_velocidadeclasse = new System.Windows.Forms.Label();
+            this.lbl_fococlasse = new System.Windows.Forms.Label();
+            this.lbl_auraclasse = new System.Windows.Forms.Label();
+            this.lbl_classemag = new System.Windows.Forms.Label();
+            this.lbl_vitclasse = new System.Windows.Forms.Label();
+            this.lbl_forcaclasse = new System.Windows.Forms.Label();
+            this.lbl_descricaoclasse = new System.Windows.Forms.Label();
+            this.lbl_nomeclasse = new System.Windows.Forms.Label();
             this.racasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new Projeto_Jogo_RPG.DataSet1();
@@ -80,10 +101,10 @@
             this.classesTableAdapter = new Projeto_Jogo_RPG.DataSet1TableAdapters.ClassesTableAdapter();
             this.racasTableAdapter = new Projeto_Jogo_RPG.DataSet1TableAdapters.RacasTableAdapter();
             this.racasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.txt_descricaoraca = new System.Windows.Forms.TextBox();
             this.tbc_personagem.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.racasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
@@ -105,6 +126,7 @@
             this.tbc_personagem.Controls.Add(this.tabPage1);
             this.tbc_personagem.Controls.Add(this.tabPage2);
             this.tbc_personagem.Controls.Add(this.tabPage3);
+            this.tbc_personagem.Controls.Add(this.tabPage4);
             this.tbc_personagem.Location = new System.Drawing.Point(12, 53);
             this.tbc_personagem.Name = "tbc_personagem";
             this.tbc_personagem.SelectedIndex = 0;
@@ -376,6 +398,15 @@
             this.tabPage3.Text = "Raça";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // txt_descricaoraca
+            // 
+            this.txt_descricaoraca.AcceptsTab = true;
+            this.txt_descricaoraca.Location = new System.Drawing.Point(90, 324);
+            this.txt_descricaoraca.Multiline = true;
+            this.txt_descricaoraca.Name = "txt_descricaoraca";
+            this.txt_descricaoraca.Size = new System.Drawing.Size(355, 161);
+            this.txt_descricaoraca.TabIndex = 17;
+            // 
             // btn_cadastrar
             // 
             this.btn_cadastrar.Location = new System.Drawing.Point(643, 517);
@@ -508,6 +539,190 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome";
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.btn_inserir_classe);
+            this.tabPage4.Controls.Add(this.txt_prec_classe);
+            this.tabPage4.Controls.Add(this.lbl_precisaoclasse);
+            this.tabPage4.Controls.Add(this.txt_descricao_classe);
+            this.tabPage4.Controls.Add(this.txt_velocidade_classe);
+            this.tabPage4.Controls.Add(this.txt_foco_classe);
+            this.tabPage4.Controls.Add(this.txt_aura_classe);
+            this.tabPage4.Controls.Add(this.txt_magia_classe);
+            this.tabPage4.Controls.Add(this.txt_vitalidade_classe);
+            this.tabPage4.Controls.Add(this.txt_for_classe);
+            this.tabPage4.Controls.Add(this.txt_nome_classe);
+            this.tabPage4.Controls.Add(this.lbl_velocidadeclasse);
+            this.tabPage4.Controls.Add(this.lbl_fococlasse);
+            this.tabPage4.Controls.Add(this.lbl_auraclasse);
+            this.tabPage4.Controls.Add(this.lbl_classemag);
+            this.tabPage4.Controls.Add(this.lbl_vitclasse);
+            this.tabPage4.Controls.Add(this.lbl_forcaclasse);
+            this.tabPage4.Controls.Add(this.lbl_descricaoclasse);
+            this.tabPage4.Controls.Add(this.lbl_nomeclasse);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(768, 573);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Classe";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // btn_inserir_classe
+            // 
+            this.btn_inserir_classe.Location = new System.Drawing.Point(640, 500);
+            this.btn_inserir_classe.Name = "btn_inserir_classe";
+            this.btn_inserir_classe.Size = new System.Drawing.Size(75, 23);
+            this.btn_inserir_classe.TabIndex = 18;
+            this.btn_inserir_classe.Text = "Inserir";
+            this.btn_inserir_classe.UseVisualStyleBackColor = true;
+            this.btn_inserir_classe.Click += new System.EventHandler(this.btn_inserir_classe_Click);
+            // 
+            // txt_prec_classe
+            // 
+            this.txt_prec_classe.Location = new System.Drawing.Point(81, 258);
+            this.txt_prec_classe.Name = "txt_prec_classe";
+            this.txt_prec_classe.Size = new System.Drawing.Size(100, 20);
+            this.txt_prec_classe.TabIndex = 17;
+            // 
+            // lbl_precisaoclasse
+            // 
+            this.lbl_precisaoclasse.AutoSize = true;
+            this.lbl_precisaoclasse.Location = new System.Drawing.Point(20, 261);
+            this.lbl_precisaoclasse.Name = "lbl_precisaoclasse";
+            this.lbl_precisaoclasse.Size = new System.Drawing.Size(48, 13);
+            this.lbl_precisaoclasse.TabIndex = 16;
+            this.lbl_precisaoclasse.Text = "Precisão";
+            // 
+            // txt_descricao_classe
+            // 
+            this.txt_descricao_classe.Location = new System.Drawing.Point(23, 312);
+            this.txt_descricao_classe.Multiline = true;
+            this.txt_descricao_classe.Name = "txt_descricao_classe";
+            this.txt_descricao_classe.Size = new System.Drawing.Size(405, 175);
+            this.txt_descricao_classe.TabIndex = 15;
+            // 
+            // txt_velocidade_classe
+            // 
+            this.txt_velocidade_classe.Location = new System.Drawing.Point(77, 216);
+            this.txt_velocidade_classe.Name = "txt_velocidade_classe";
+            this.txt_velocidade_classe.Size = new System.Drawing.Size(100, 20);
+            this.txt_velocidade_classe.TabIndex = 14;
+            // 
+            // txt_foco_classe
+            // 
+            this.txt_foco_classe.Location = new System.Drawing.Point(77, 184);
+            this.txt_foco_classe.Name = "txt_foco_classe";
+            this.txt_foco_classe.Size = new System.Drawing.Size(100, 20);
+            this.txt_foco_classe.TabIndex = 13;
+            // 
+            // txt_aura_classe
+            // 
+            this.txt_aura_classe.Location = new System.Drawing.Point(77, 154);
+            this.txt_aura_classe.Name = "txt_aura_classe";
+            this.txt_aura_classe.Size = new System.Drawing.Size(100, 20);
+            this.txt_aura_classe.TabIndex = 12;
+            // 
+            // txt_magia_classe
+            // 
+            this.txt_magia_classe.Location = new System.Drawing.Point(77, 125);
+            this.txt_magia_classe.Name = "txt_magia_classe";
+            this.txt_magia_classe.Size = new System.Drawing.Size(100, 20);
+            this.txt_magia_classe.TabIndex = 11;
+            // 
+            // txt_vitalidade_classe
+            // 
+            this.txt_vitalidade_classe.Location = new System.Drawing.Point(77, 90);
+            this.txt_vitalidade_classe.Name = "txt_vitalidade_classe";
+            this.txt_vitalidade_classe.Size = new System.Drawing.Size(100, 20);
+            this.txt_vitalidade_classe.TabIndex = 10;
+            // 
+            // txt_for_classe
+            // 
+            this.txt_for_classe.Location = new System.Drawing.Point(77, 57);
+            this.txt_for_classe.Name = "txt_for_classe";
+            this.txt_for_classe.Size = new System.Drawing.Size(100, 20);
+            this.txt_for_classe.TabIndex = 9;
+            // 
+            // txt_nome_classe
+            // 
+            this.txt_nome_classe.Location = new System.Drawing.Point(77, 23);
+            this.txt_nome_classe.Name = "txt_nome_classe";
+            this.txt_nome_classe.Size = new System.Drawing.Size(100, 20);
+            this.txt_nome_classe.TabIndex = 8;
+            // 
+            // lbl_velocidadeclasse
+            // 
+            this.lbl_velocidadeclasse.AutoSize = true;
+            this.lbl_velocidadeclasse.Location = new System.Drawing.Point(20, 223);
+            this.lbl_velocidadeclasse.Name = "lbl_velocidadeclasse";
+            this.lbl_velocidadeclasse.Size = new System.Drawing.Size(60, 13);
+            this.lbl_velocidadeclasse.TabIndex = 7;
+            this.lbl_velocidadeclasse.Text = "Velocidade";
+            // 
+            // lbl_fococlasse
+            // 
+            this.lbl_fococlasse.AutoSize = true;
+            this.lbl_fococlasse.Location = new System.Drawing.Point(20, 191);
+            this.lbl_fococlasse.Name = "lbl_fococlasse";
+            this.lbl_fococlasse.Size = new System.Drawing.Size(31, 13);
+            this.lbl_fococlasse.TabIndex = 6;
+            this.lbl_fococlasse.Text = "Foco";
+            // 
+            // lbl_auraclasse
+            // 
+            this.lbl_auraclasse.AutoSize = true;
+            this.lbl_auraclasse.Location = new System.Drawing.Point(20, 161);
+            this.lbl_auraclasse.Name = "lbl_auraclasse";
+            this.lbl_auraclasse.Size = new System.Drawing.Size(29, 13);
+            this.lbl_auraclasse.TabIndex = 5;
+            this.lbl_auraclasse.Text = "Aura";
+            // 
+            // lbl_classemag
+            // 
+            this.lbl_classemag.AutoSize = true;
+            this.lbl_classemag.Location = new System.Drawing.Point(20, 128);
+            this.lbl_classemag.Name = "lbl_classemag";
+            this.lbl_classemag.Size = new System.Drawing.Size(36, 13);
+            this.lbl_classemag.TabIndex = 4;
+            this.lbl_classemag.Text = "Magia";
+            // 
+            // lbl_vitclasse
+            // 
+            this.lbl_vitclasse.AutoSize = true;
+            this.lbl_vitclasse.Location = new System.Drawing.Point(20, 97);
+            this.lbl_vitclasse.Name = "lbl_vitclasse";
+            this.lbl_vitclasse.Size = new System.Drawing.Size(53, 13);
+            this.lbl_vitclasse.TabIndex = 3;
+            this.lbl_vitclasse.Text = "Vitalidade";
+            // 
+            // lbl_forcaclasse
+            // 
+            this.lbl_forcaclasse.AutoSize = true;
+            this.lbl_forcaclasse.Location = new System.Drawing.Point(20, 64);
+            this.lbl_forcaclasse.Name = "lbl_forcaclasse";
+            this.lbl_forcaclasse.Size = new System.Drawing.Size(34, 13);
+            this.lbl_forcaclasse.TabIndex = 2;
+            this.lbl_forcaclasse.Text = "Força";
+            // 
+            // lbl_descricaoclasse
+            // 
+            this.lbl_descricaoclasse.AutoSize = true;
+            this.lbl_descricaoclasse.Location = new System.Drawing.Point(20, 296);
+            this.lbl_descricaoclasse.Name = "lbl_descricaoclasse";
+            this.lbl_descricaoclasse.Size = new System.Drawing.Size(55, 13);
+            this.lbl_descricaoclasse.TabIndex = 1;
+            this.lbl_descricaoclasse.Text = "Descrição";
+            // 
+            // lbl_nomeclasse
+            // 
+            this.lbl_nomeclasse.AutoSize = true;
+            this.lbl_nomeclasse.Location = new System.Drawing.Point(20, 26);
+            this.lbl_nomeclasse.Name = "lbl_nomeclasse";
+            this.lbl_nomeclasse.Size = new System.Drawing.Size(35, 13);
+            this.lbl_nomeclasse.TabIndex = 0;
+            this.lbl_nomeclasse.Text = "Nome";
+            // 
             // racasBindingSource
             // 
             this.racasBindingSource.DataMember = "Racas";
@@ -541,15 +756,6 @@
             this.racasBindingSource1.DataMember = "Racas";
             this.racasBindingSource1.DataSource = this.dataSet1BindingSource;
             // 
-            // txt_descricaoraca
-            // 
-            this.txt_descricaoraca.AcceptsTab = true;
-            this.txt_descricaoraca.Location = new System.Drawing.Point(90, 324);
-            this.txt_descricaoraca.Multiline = true;
-            this.txt_descricaoraca.Name = "txt_descricaoraca";
-            this.txt_descricaoraca.Size = new System.Drawing.Size(355, 161);
-            this.txt_descricaoraca.TabIndex = 17;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -565,6 +771,8 @@
             this.tabPage1.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.racasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
@@ -629,6 +837,26 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_descricaoraca;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.Button btn_inserir_classe;
+        private System.Windows.Forms.TextBox txt_prec_classe;
+        private System.Windows.Forms.Label lbl_precisaoclasse;
+        private System.Windows.Forms.TextBox txt_descricao_classe;
+        private System.Windows.Forms.TextBox txt_velocidade_classe;
+        private System.Windows.Forms.TextBox txt_foco_classe;
+        private System.Windows.Forms.TextBox txt_aura_classe;
+        private System.Windows.Forms.TextBox txt_magia_classe;
+        private System.Windows.Forms.TextBox txt_vitalidade_classe;
+        private System.Windows.Forms.TextBox txt_for_classe;
+        private System.Windows.Forms.TextBox txt_nome_classe;
+        private System.Windows.Forms.Label lbl_velocidadeclasse;
+        private System.Windows.Forms.Label lbl_fococlasse;
+        private System.Windows.Forms.Label lbl_auraclasse;
+        private System.Windows.Forms.Label lbl_classemag;
+        private System.Windows.Forms.Label lbl_vitclasse;
+        private System.Windows.Forms.Label lbl_forcaclasse;
+        private System.Windows.Forms.Label lbl_descricaoclasse;
+        private System.Windows.Forms.Label lbl_nomeclasse;
     }
 }
 
