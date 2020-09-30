@@ -130,7 +130,7 @@
 <!-- Ficha Pessoal  -->
                         <table class="textoFicha" border="0" style="margin-left:5%; margin-right:5%;" border="1" width="90%">
                             <tr style="background-color:#cdd6de">
-                                <td class="auto-style6">Nome <br /><asp:Label ID="lblNome" runat="server" Text=" "></asp:Label></td>
+                                <td class="auto-style6"><br /><asp:Label ID="lblNome" runat="server" Text="Nomes"></asp:Label></td>
                                 <td rowspan="2">
 
                          <table class="textoFicha" border="1">
@@ -157,7 +157,7 @@
                                 </td>
                             </tr>
                             <tr style="background-color:#cdd6de">
-                                <td class="auto-style7">Sobrenome <br /><asp:Label ID="lblSobrenome" runat="server" Text=" "></asp:Label></td>
+                                <td class="auto-style7"><br /><asp:Label ID="lblSobrenome" runat="server" Text="Sobrenome"></asp:Label></td>
                             </tr>
                         </table>
 
