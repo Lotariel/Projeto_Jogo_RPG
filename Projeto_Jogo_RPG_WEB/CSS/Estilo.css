@@ -1,6 +1,4 @@
-﻿body {	width: 194px;
-	height: 174px;
-}
+﻿
 
 Textbox {
 	align-items:center;
@@ -11,9 +9,9 @@ button {
 }
 
 #quadroDeLogin {
-
-	border-radius: 3px 4px;
-	text-align:center;
+	align-content: center;
+	margin: 0px auto;
+	text-align: center;
 	background-color:;
 	width: 80px;
 	width: 176px;

@@ -13,12 +13,15 @@ namespace Projeto_Jogo_RPG_WEB.Classes
     {
         public String resultado;
         //Método que realiza o select no Banco de Dados
+        //public String select(String nomeColuna, String nomeTabela)
         public String select()
         {
             //Instância de um novo objeto que recebe os comandos SQL para interação com o BD
             //Vide select que interage com a tabela login e puxa as informações de login cadastradas na tabela
             //E chama o método AbrirConexao() que realiza a conexão com o BD
             SqlCommand sel = new SqlCommand("select nome from personagem", AbrirConexao());
+            //SqlCommand sel = new SqlCommand("select "+nomeColuna+" from "+nomeTabela);
+
             //Objeto que recebe método de execução de comando SQL
             resultado = sel.ExecuteScalar().ToString();
             //Chamada de método que encera a conexão após executado o comando requerido
@@ -37,7 +40,10 @@ namespace Projeto_Jogo_RPG_WEB.Classes
 
             try
             {
-                SqlCommand query = new SqlCommand("select " + NomeColuna + " from " + NomeTabela + " where " + Filtro + " = " + ValorFiltro, AbrirConexao());
+                SqlCommand query = new SqlCommand("select " + NomeColuna +
+                                                  " from " + NomeTabela + 
+                                                  " where " + Filtro + 
+                                                  " = " + ValorFiltro, AbrirConexao());
                 resultado = query.ExecuteScalar().ToString();
                 FecharConexao();
                 return resultado;

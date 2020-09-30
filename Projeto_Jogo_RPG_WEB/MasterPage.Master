@@ -130,34 +130,34 @@
 <!-- Ficha Pessoal  -->
                         <table class="textoFicha" border="0" style="margin-left:5%; margin-right:5%;" border="1" width="90%">
                             <tr style="background-color:#cdd6de">
-                                <td class="auto-style6">Nome</td>
+                                <td class="auto-style6">Nome <br /><asp:Label ID="lblNome" runat="server" Text=" "></asp:Label></td>
                                 <td rowspan="2">
 
                          <table class="textoFicha" border="1">
 
                             <tr style="background-color:White;">
-                                <td>Idade</td>
+                                <td>Idade: <asp:Label ID="lblIdade" runat="server" Text=" "></asp:Label></td>
                             </tr>
                             <tr style="background-color:#E3EAEB;">
-                                <td>Sexo</td>
+                                <td>Sexo: <asp:Label ID="lblSexo" runat="server" Text=" "></asp:Label></td>
                             </tr>
                             <tr style="background-color:White;">
-                                <td>Cor dos Olhos</td>
+                                <td>Cor dos Olhos: <asp:Label ID="lblOlho" runat="server" Text=" "></asp:Label></td>
                             </tr>
                             <tr style="background-color:#E3EAEB;">
-                                <td>Cor dos Cabelos</td>
+                                <td>Cor dos Cabelos: <asp:Label ID="lblCabelo" runat="server" Text=" "></asp:Label></td>
                             </tr>
                             <tr style="background-color:White;">
-                                <td>Altura</td>
+                                <td>Altura: <asp:Label ID="lblAltura" runat="server" Text=" "></asp:Label></td>
                             </tr>
                             <tr style="background-color:#E3EAEB;">
-                                <td>Peso</td>
+                                <td>Peso: <asp:Label ID="lblPeso" runat="server" Text=" "></asp:Label></td>
                             </tr>
                         </table>
                                 </td>
                             </tr>
                             <tr style="background-color:#cdd6de">
-                                <td class="auto-style7">Sobrenome</td>
+                                <td class="auto-style7">Sobrenome <br /><asp:Label ID="lblSobrenome" runat="server" Text=" "></asp:Label></td>
                             </tr>
                         </table>
 
