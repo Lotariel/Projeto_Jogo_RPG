@@ -38,19 +38,30 @@ namespace Projeto_Jogo_RPG_WEB.Classes
             //Filtro = Selecionar o nome da coluna que será filtrada
             //ValorFiltro = informar qual o valor será usado para coluna filtrada Exemplo where id_personagem = ValorFiltro
 
+            SqlCommand query = new SqlCommand("select " + NomeColuna +
+                                              " from " + NomeTabela +
+                                              " where " + Filtro +
+                                              " = @ValorFiltro", AbrirConexao());
+
+            query.Parameters.Add(new SqlParameter("ValorFiltro", ValorFiltro));
+
+            FecharConexao();
+
             try
             {
-                SqlCommand query = new SqlCommand("select " + NomeColuna +
-                                                  " from " + NomeTabela + 
-                                                  " where " + Filtro + 
-                                                  " = " + ValorFiltro, AbrirConexao());
-                resultado = query.ExecuteScalar().ToString();
-                FecharConexao();
-                return resultado;
+                if (query.ExecuteScalar() == null)
+                {
+                    resultado = "";
+                    return resultado;
+                }
+                else
+                {
+                    resultado = resultado = query.ExecuteScalar().ToString();
+                    return resultado;
+                }
             }
             catch (SqlException erro)
             {
-
                 return erro.ToString();
             }
             

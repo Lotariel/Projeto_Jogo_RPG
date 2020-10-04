@@ -26,26 +26,18 @@ namespace Projeto_Jogo_RPG_WEB
         {
             try
             {
-                String nome = login.nomePersonagem();
-
-                String n = "Daniel";
-
-                //String cod = crud.select_com_where("personagem", "ID_PERSONAGEM", "NOME", "Daniel");
-
-                //String no = "Daniel";
-                //lblTeste.Text = nome;
-                //lblTeste.Text = crud.select_com_where("personagem", "ID_PERSONAGEM", "nome", "'" + no + "'");
+                String ID = Session["ID"].ToString();
 
 
-                lblIdade.Text = crud.select_com_where("personagem", "IDADE", "ID_PERSONAGEM0", "1");
-                lblSexo.Text = crud.select_com_where("personagem", "SEXO", "ID_PERSONAGEM", "1");
-                lblOlho.Text = crud.select_com_where("personagem", "COR_OLHOS", "ID_PERSONAGEM", "1");
-                lblCabelo.Text = crud.select_com_where("personagem", "COR_CABELO", "ID_PERSONAGEM", "1");
-                lblAltura.Text = crud.select_com_where("personagem", "ALTURA", "ID_PERSONAGEM", "1");
-                lblPeso.Text = crud.select_com_where("personagem", "PESO", "ID_PERSONAGEM", "1");
+                lblIdade.Text = crud.select_com_where("personagem", "IDADE", "ID_PERSONAGEM", ID);
+                lblSexo.Text = crud.select_com_where("personagem", "SEXO", "ID_PERSONAGEM", ID);
+                lblOlho.Text = crud.select_com_where("personagem", "COR_OLHOS", "ID_PERSONAGEM", ID);
+                lblCabelo.Text = crud.select_com_where("personagem", "COR_CABELO", "ID_PERSONAGEM", ID);
+                lblAltura.Text = crud.select_com_where("personagem", "ALTURA", "ID_PERSONAGEM", ID);
+                lblPeso.Text = crud.select_com_where("personagem", "PESO", "ID_PERSONAGEM", ID);
 
-                lblNome.Text = crud.select_com_where("personagem", "NOME", "ID_PERSONAGEM", "1");
-                lblSobrenome.Text = crud.select_com_where("personagem", "SOBRENOME", "ID_PERSONAGEM", "1");
+                lblNome.Text = crud.select_com_where("personagem", "NOME", "ID_PERSONAGEM", ID);
+                lblSobrenome.Text = crud.select_com_where("personagem", "SOBRENOME", "ID_PERSONAGEM", ID);
             }
             catch(IOException erro)
             {
