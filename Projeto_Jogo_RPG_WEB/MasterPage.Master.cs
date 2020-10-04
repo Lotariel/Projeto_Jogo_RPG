@@ -37,7 +37,7 @@ namespace Projeto_Jogo_RPG_WEB
                 //lblTeste.Text = crud.select_com_where("personagem", "ID_PERSONAGEM", "nome", "'" + no + "'");
 
 
-                lblIdade.Text = crud.select_com_where("personagem", "IDADE", "ID_PERSONAGEM", "1");
+                lblIdade.Text = crud.select_com_where("personagem", "IDADE", "ID_PERSONAGEM0", "1");
                 lblSexo.Text = crud.select_com_where("personagem", "SEXO", "ID_PERSONAGEM", "1");
                 lblOlho.Text = crud.select_com_where("personagem", "COR_OLHOS", "ID_PERSONAGEM", "1");
                 lblCabelo.Text = crud.select_com_where("personagem", "COR_CABELO", "ID_PERSONAGEM", "1");

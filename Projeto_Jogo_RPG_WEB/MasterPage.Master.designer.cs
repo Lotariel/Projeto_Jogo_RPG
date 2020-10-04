@@ -51,6 +51,15 @@ namespace Projeto_Jogo_RPG_WEB
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
+        /// Controle Label21.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label21;
+
+        /// <summary>
         /// Controle Label3.
         /// </summary>
         /// <remarks>
