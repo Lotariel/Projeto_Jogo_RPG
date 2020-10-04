@@ -10,7 +10,7 @@
 </head>
 <body>
 	<!--Tag para formar um quadro em volta do formulário de login-->
-	<div id="fieldQuadro">
+	<div id="fieldQuadro" style="text-align: center">
 		<fieldset id="quadroDeLogin" >
 			<!--Tag para legenda do quadro de login-->
 			<legend align="center">Área de login</legend>
