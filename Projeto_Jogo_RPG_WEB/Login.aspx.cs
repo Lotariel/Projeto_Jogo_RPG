@@ -28,7 +28,7 @@ namespace Projeto_Jogo_RPG_WEB
             nome = txtLogin.Text;
 
             //Aqui será criado a validação das informações apresentadas pelo usuário com as que estão cadastradas no banco
-
+            //.......teste
             //Comando condicional que verifica se o que o usuário digitou na área de login
             //existe no banco de dadaos (chamando o objeto crud, instância da classe CRUD, e
             //utilizando o método select()

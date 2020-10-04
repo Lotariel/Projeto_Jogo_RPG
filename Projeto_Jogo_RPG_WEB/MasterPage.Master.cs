@@ -28,6 +28,8 @@ namespace Projeto_Jogo_RPG_WEB
             {
                 String nome = login.nomePersonagem();
 
+                String n = "Daniel";
+
                 //String cod = crud.select_com_where("personagem", "ID_PERSONAGEM", "NOME", "Daniel");
 
                 //String no = "Daniel";
