@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.lbltitulo = new System.Windows.Forms.Label();
             this.tbc_personagem = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPersonagem = new System.Windows.Forms.TabPage();
             this.cmb_classe = new System.Windows.Forms.ComboBox();
             this.lbl_classe = new System.Windows.Forms.Label();
             this.txt_historia = new System.Windows.Forms.TextBox();
@@ -56,7 +56,7 @@
             this.lbl_nome = new System.Windows.Forms.Label();
             this.btn_enviar = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabRaca = new System.Windows.Forms.TabPage();
             this.txt_descricaoraca = new System.Windows.Forms.TextBox();
             this.btn_cadastrar = new System.Windows.Forms.Button();
             this.txt_velraca = new System.Windows.Forms.TextBox();
@@ -74,7 +74,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabClasse = new System.Windows.Forms.TabPage();
             this.btn_inserir_classe = new System.Windows.Forms.Button();
             this.txt_prec_classe = new System.Windows.Forms.TextBox();
             this.lbl_precisaoclasse = new System.Windows.Forms.Label();
@@ -94,6 +94,7 @@
             this.lbl_forcaclasse = new System.Windows.Forms.Label();
             this.lbl_descricaoclasse = new System.Windows.Forms.Label();
             this.lbl_nomeclasse = new System.Windows.Forms.Label();
+            this.tabPericias = new System.Windows.Forms.TabPage();
             this.racasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new Projeto_Jogo_RPG.DataSet1();
@@ -101,10 +102,16 @@
             this.classesTableAdapter = new Projeto_Jogo_RPG.DataSet1TableAdapters.ClassesTableAdapter();
             this.racasTableAdapter = new Projeto_Jogo_RPG.DataSet1TableAdapters.RacasTableAdapter();
             this.racasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtNomePericia = new System.Windows.Forms.TextBox();
+            this.txtDescPericia = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.btnCadastrarPericia = new System.Windows.Forms.Button();
             this.tbc_personagem.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
+            this.tabPersonagem.SuspendLayout();
+            this.tabRaca.SuspendLayout();
+            this.tabClasse.SuspendLayout();
+            this.tabPericias.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.racasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
@@ -123,10 +130,11 @@
             // 
             // tbc_personagem
             // 
-            this.tbc_personagem.Controls.Add(this.tabPage1);
+            this.tbc_personagem.Controls.Add(this.tabPersonagem);
             this.tbc_personagem.Controls.Add(this.tabPage2);
-            this.tbc_personagem.Controls.Add(this.tabPage3);
-            this.tbc_personagem.Controls.Add(this.tabPage4);
+            this.tbc_personagem.Controls.Add(this.tabRaca);
+            this.tbc_personagem.Controls.Add(this.tabClasse);
+            this.tbc_personagem.Controls.Add(this.tabPericias);
             this.tbc_personagem.Location = new System.Drawing.Point(12, 53);
             this.tbc_personagem.Name = "tbc_personagem";
             this.tbc_personagem.SelectedIndex = 0;
@@ -134,38 +142,38 @@
             this.tbc_personagem.Size = new System.Drawing.Size(776, 599);
             this.tbc_personagem.TabIndex = 1;
             // 
-            // tabPage1
+            // tabPersonagem
             // 
-            this.tabPage1.Controls.Add(this.cmb_classe);
-            this.tabPage1.Controls.Add(this.lbl_classe);
-            this.tabPage1.Controls.Add(this.txt_historia);
-            this.tabPage1.Controls.Add(this.lbl_historia);
-            this.tabPage1.Controls.Add(this.txt_altua);
-            this.tabPage1.Controls.Add(this.lbl_altura);
-            this.tabPage1.Controls.Add(this.lbl_peso);
-            this.tabPage1.Controls.Add(this.txt_peso);
-            this.tabPage1.Controls.Add(this.lbl_cabelo);
-            this.tabPage1.Controls.Add(this.txt_cabelo);
-            this.tabPage1.Controls.Add(this.txt_olhos);
-            this.tabPage1.Controls.Add(this.lbl_olhos);
-            this.tabPage1.Controls.Add(this.cmb_raca);
-            this.tabPage1.Controls.Add(this.lbl_raca);
-            this.tabPage1.Controls.Add(this.comboBox1);
-            this.tabPage1.Controls.Add(this.lbl_sexo);
-            this.tabPage1.Controls.Add(this.txt_idade);
-            this.tabPage1.Controls.Add(this.lbl_idade);
-            this.tabPage1.Controls.Add(this.txt_sobrenome);
-            this.tabPage1.Controls.Add(this.txt_nome);
-            this.tabPage1.Controls.Add(this.lbl_sobrenome);
-            this.tabPage1.Controls.Add(this.lbl_nome);
-            this.tabPage1.Controls.Add(this.btn_enviar);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(768, 573);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Personagem";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPersonagem.Controls.Add(this.cmb_classe);
+            this.tabPersonagem.Controls.Add(this.lbl_classe);
+            this.tabPersonagem.Controls.Add(this.txt_historia);
+            this.tabPersonagem.Controls.Add(this.lbl_historia);
+            this.tabPersonagem.Controls.Add(this.txt_altua);
+            this.tabPersonagem.Controls.Add(this.lbl_altura);
+            this.tabPersonagem.Controls.Add(this.lbl_peso);
+            this.tabPersonagem.Controls.Add(this.txt_peso);
+            this.tabPersonagem.Controls.Add(this.lbl_cabelo);
+            this.tabPersonagem.Controls.Add(this.txt_cabelo);
+            this.tabPersonagem.Controls.Add(this.txt_olhos);
+            this.tabPersonagem.Controls.Add(this.lbl_olhos);
+            this.tabPersonagem.Controls.Add(this.cmb_raca);
+            this.tabPersonagem.Controls.Add(this.lbl_raca);
+            this.tabPersonagem.Controls.Add(this.comboBox1);
+            this.tabPersonagem.Controls.Add(this.lbl_sexo);
+            this.tabPersonagem.Controls.Add(this.txt_idade);
+            this.tabPersonagem.Controls.Add(this.lbl_idade);
+            this.tabPersonagem.Controls.Add(this.txt_sobrenome);
+            this.tabPersonagem.Controls.Add(this.txt_nome);
+            this.tabPersonagem.Controls.Add(this.lbl_sobrenome);
+            this.tabPersonagem.Controls.Add(this.lbl_nome);
+            this.tabPersonagem.Controls.Add(this.btn_enviar);
+            this.tabPersonagem.Location = new System.Drawing.Point(4, 22);
+            this.tabPersonagem.Name = "tabPersonagem";
+            this.tabPersonagem.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPersonagem.Size = new System.Drawing.Size(768, 573);
+            this.tabPersonagem.TabIndex = 0;
+            this.tabPersonagem.Text = "Personagem";
+            this.tabPersonagem.UseVisualStyleBackColor = true;
             // 
             // cmb_classe
             // 
@@ -371,32 +379,32 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // tabRaca
             // 
-            this.tabPage3.Controls.Add(this.txt_descricaoraca);
-            this.tabPage3.Controls.Add(this.btn_cadastrar);
-            this.tabPage3.Controls.Add(this.txt_velraca);
-            this.tabPage3.Controls.Add(this.txt_focoraca);
-            this.tabPage3.Controls.Add(this.txt_auraraca);
-            this.tabPage3.Controls.Add(this.txt_magraca);
-            this.tabPage3.Controls.Add(this.txt_vitraca);
-            this.tabPage3.Controls.Add(this.txt_forcaraca);
-            this.tabPage3.Controls.Add(this.txt_nomeraca);
-            this.tabPage3.Controls.Add(this.label8);
-            this.tabPage3.Controls.Add(this.label7);
-            this.tabPage3.Controls.Add(this.label6);
-            this.tabPage3.Controls.Add(this.label5);
-            this.tabPage3.Controls.Add(this.label4);
-            this.tabPage3.Controls.Add(this.label3);
-            this.tabPage3.Controls.Add(this.label2);
-            this.tabPage3.Controls.Add(this.label1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(768, 573);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Raça";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabRaca.Controls.Add(this.txt_descricaoraca);
+            this.tabRaca.Controls.Add(this.btn_cadastrar);
+            this.tabRaca.Controls.Add(this.txt_velraca);
+            this.tabRaca.Controls.Add(this.txt_focoraca);
+            this.tabRaca.Controls.Add(this.txt_auraraca);
+            this.tabRaca.Controls.Add(this.txt_magraca);
+            this.tabRaca.Controls.Add(this.txt_vitraca);
+            this.tabRaca.Controls.Add(this.txt_forcaraca);
+            this.tabRaca.Controls.Add(this.txt_nomeraca);
+            this.tabRaca.Controls.Add(this.label8);
+            this.tabRaca.Controls.Add(this.label7);
+            this.tabRaca.Controls.Add(this.label6);
+            this.tabRaca.Controls.Add(this.label5);
+            this.tabRaca.Controls.Add(this.label4);
+            this.tabRaca.Controls.Add(this.label3);
+            this.tabRaca.Controls.Add(this.label2);
+            this.tabRaca.Controls.Add(this.label1);
+            this.tabRaca.Location = new System.Drawing.Point(4, 22);
+            this.tabRaca.Name = "tabRaca";
+            this.tabRaca.Padding = new System.Windows.Forms.Padding(3);
+            this.tabRaca.Size = new System.Drawing.Size(768, 573);
+            this.tabRaca.TabIndex = 2;
+            this.tabRaca.Text = "Raça";
+            this.tabRaca.UseVisualStyleBackColor = true;
             // 
             // txt_descricaoraca
             // 
@@ -539,34 +547,34 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome";
             // 
-            // tabPage4
+            // tabClasse
             // 
-            this.tabPage4.Controls.Add(this.btn_inserir_classe);
-            this.tabPage4.Controls.Add(this.txt_prec_classe);
-            this.tabPage4.Controls.Add(this.lbl_precisaoclasse);
-            this.tabPage4.Controls.Add(this.txt_descricao_classe);
-            this.tabPage4.Controls.Add(this.txt_velocidade_classe);
-            this.tabPage4.Controls.Add(this.txt_foco_classe);
-            this.tabPage4.Controls.Add(this.txt_aura_classe);
-            this.tabPage4.Controls.Add(this.txt_magia_classe);
-            this.tabPage4.Controls.Add(this.txt_vitalidade_classe);
-            this.tabPage4.Controls.Add(this.txt_for_classe);
-            this.tabPage4.Controls.Add(this.txt_nome_classe);
-            this.tabPage4.Controls.Add(this.lbl_velocidadeclasse);
-            this.tabPage4.Controls.Add(this.lbl_fococlasse);
-            this.tabPage4.Controls.Add(this.lbl_auraclasse);
-            this.tabPage4.Controls.Add(this.lbl_classemag);
-            this.tabPage4.Controls.Add(this.lbl_vitclasse);
-            this.tabPage4.Controls.Add(this.lbl_forcaclasse);
-            this.tabPage4.Controls.Add(this.lbl_descricaoclasse);
-            this.tabPage4.Controls.Add(this.lbl_nomeclasse);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(768, 573);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Classe";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.tabClasse.Controls.Add(this.btn_inserir_classe);
+            this.tabClasse.Controls.Add(this.txt_prec_classe);
+            this.tabClasse.Controls.Add(this.lbl_precisaoclasse);
+            this.tabClasse.Controls.Add(this.txt_descricao_classe);
+            this.tabClasse.Controls.Add(this.txt_velocidade_classe);
+            this.tabClasse.Controls.Add(this.txt_foco_classe);
+            this.tabClasse.Controls.Add(this.txt_aura_classe);
+            this.tabClasse.Controls.Add(this.txt_magia_classe);
+            this.tabClasse.Controls.Add(this.txt_vitalidade_classe);
+            this.tabClasse.Controls.Add(this.txt_for_classe);
+            this.tabClasse.Controls.Add(this.txt_nome_classe);
+            this.tabClasse.Controls.Add(this.lbl_velocidadeclasse);
+            this.tabClasse.Controls.Add(this.lbl_fococlasse);
+            this.tabClasse.Controls.Add(this.lbl_auraclasse);
+            this.tabClasse.Controls.Add(this.lbl_classemag);
+            this.tabClasse.Controls.Add(this.lbl_vitclasse);
+            this.tabClasse.Controls.Add(this.lbl_forcaclasse);
+            this.tabClasse.Controls.Add(this.lbl_descricaoclasse);
+            this.tabClasse.Controls.Add(this.lbl_nomeclasse);
+            this.tabClasse.Location = new System.Drawing.Point(4, 22);
+            this.tabClasse.Name = "tabClasse";
+            this.tabClasse.Padding = new System.Windows.Forms.Padding(3);
+            this.tabClasse.Size = new System.Drawing.Size(768, 573);
+            this.tabClasse.TabIndex = 3;
+            this.tabClasse.Text = "Classe";
+            this.tabClasse.UseVisualStyleBackColor = true;
             // 
             // btn_inserir_classe
             // 
@@ -574,7 +582,7 @@
             this.btn_inserir_classe.Name = "btn_inserir_classe";
             this.btn_inserir_classe.Size = new System.Drawing.Size(75, 23);
             this.btn_inserir_classe.TabIndex = 18;
-            this.btn_inserir_classe.Text = "Inserir";
+            this.btn_inserir_classe.Text = "Cadastrar";
             this.btn_inserir_classe.UseVisualStyleBackColor = true;
             this.btn_inserir_classe.Click += new System.EventHandler(this.btn_inserir_classe_Click);
             // 
@@ -723,6 +731,21 @@
             this.lbl_nomeclasse.TabIndex = 0;
             this.lbl_nomeclasse.Text = "Nome";
             // 
+            // tabPericias
+            // 
+            this.tabPericias.Controls.Add(this.btnCadastrarPericia);
+            this.tabPericias.Controls.Add(this.label10);
+            this.tabPericias.Controls.Add(this.txtDescPericia);
+            this.tabPericias.Controls.Add(this.txtNomePericia);
+            this.tabPericias.Controls.Add(this.label9);
+            this.tabPericias.Location = new System.Drawing.Point(4, 22);
+            this.tabPericias.Name = "tabPericias";
+            this.tabPericias.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPericias.Size = new System.Drawing.Size(768, 573);
+            this.tabPericias.TabIndex = 4;
+            this.tabPericias.Text = "Pericias";
+            this.tabPericias.UseVisualStyleBackColor = true;
+            // 
             // racasBindingSource
             // 
             this.racasBindingSource.DataMember = "Racas";
@@ -756,6 +779,49 @@
             this.racasBindingSource1.DataMember = "Racas";
             this.racasBindingSource1.DataSource = this.dataSet1BindingSource;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 24);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(35, 13);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Nome";
+            // 
+            // txtNomePericia
+            // 
+            this.txtNomePericia.Location = new System.Drawing.Point(86, 24);
+            this.txtNomePericia.Name = "txtNomePericia";
+            this.txtNomePericia.Size = new System.Drawing.Size(100, 20);
+            this.txtNomePericia.TabIndex = 1;
+            // 
+            // txtDescPericia
+            // 
+            this.txtDescPericia.Location = new System.Drawing.Point(86, 78);
+            this.txtDescPericia.Multiline = true;
+            this.txtDescPericia.Name = "txtDescPericia";
+            this.txtDescPericia.Size = new System.Drawing.Size(333, 115);
+            this.txtDescPericia.TabIndex = 2;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 78);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(55, 13);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "Descricao";
+            // 
+            // btnCadastrarPericia
+            // 
+            this.btnCadastrarPericia.Location = new System.Drawing.Point(656, 506);
+            this.btnCadastrarPericia.Name = "btnCadastrarPericia";
+            this.btnCadastrarPericia.Size = new System.Drawing.Size(75, 23);
+            this.btnCadastrarPericia.TabIndex = 4;
+            this.btnCadastrarPericia.Text = "Cadastrar";
+            this.btnCadastrarPericia.UseVisualStyleBackColor = true;
+            this.btnCadastrarPericia.Click += new System.EventHandler(this.btnCadastrarPericia_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -767,12 +833,14 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tbc_personagem.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
+            this.tabPersonagem.ResumeLayout(false);
+            this.tabPersonagem.PerformLayout();
+            this.tabRaca.ResumeLayout(false);
+            this.tabRaca.PerformLayout();
+            this.tabClasse.ResumeLayout(false);
+            this.tabClasse.PerformLayout();
+            this.tabPericias.ResumeLayout(false);
+            this.tabPericias.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.racasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
@@ -787,7 +855,7 @@
 
         private System.Windows.Forms.Label lbltitulo;
         private System.Windows.Forms.TabControl tbc_personagem;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPersonagem;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label lbl_sexo;
         private System.Windows.Forms.TextBox txt_idade;
@@ -797,6 +865,7 @@
         private System.Windows.Forms.Label lbl_sobrenome;
         private System.Windows.Forms.Label lbl_nome;
         private System.Windows.Forms.Button btn_enviar;
+
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label lbl_peso;
         private System.Windows.Forms.TextBox txt_peso;
@@ -819,7 +888,8 @@
         private System.Windows.Forms.BindingSource racasBindingSource;
         private DataSet1TableAdapters.RacasTableAdapter racasTableAdapter;
         private System.Windows.Forms.BindingSource racasBindingSource1;
-        private System.Windows.Forms.TabPage tabPage3;
+
+        private System.Windows.Forms.TabPage tabRaca;
         private System.Windows.Forms.Button btn_cadastrar;
         private System.Windows.Forms.TextBox txt_velraca;
         private System.Windows.Forms.TextBox txt_focoraca;
@@ -837,7 +907,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_descricaoraca;
-        private System.Windows.Forms.TabPage tabPage4;
+
+        private System.Windows.Forms.TabPage tabClasse;
         private System.Windows.Forms.Button btn_inserir_classe;
         private System.Windows.Forms.TextBox txt_prec_classe;
         private System.Windows.Forms.Label lbl_precisaoclasse;
@@ -857,6 +928,13 @@
         private System.Windows.Forms.Label lbl_forcaclasse;
         private System.Windows.Forms.Label lbl_descricaoclasse;
         private System.Windows.Forms.Label lbl_nomeclasse;
+
+        private System.Windows.Forms.TabPage tabPericias;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtDescPericia;
+        private System.Windows.Forms.TextBox txtNomePericia;
+        private System.Windows.Forms.Button btnCadastrarPericia;
     }
 }
 

@@ -13,11 +13,12 @@ namespace Projeto_Jogo_RPG
 {
     public partial class Form1 : Form
     {
-        private CRUD crud = new CRUD();
+        private CRUD crud;
         
         public Form1()
         {
             InitializeComponent();
+            crud = new CRUD();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -57,13 +58,22 @@ namespace Projeto_Jogo_RPG
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
             crud.Insert_Raca(txt_nome.Text, Convert.ToInt32(txt_focoraca.Text), Convert.ToInt32(txt_vitraca.Text), Convert.ToInt32(txt_magraca.Text), Convert.ToInt32(txt_auraraca.Text), Convert.ToInt32(txt_focoraca.Text), Convert.ToInt32(txt_velraca.Text), txt_descricaoraca.Text.ToString()); ;
-            MessageBox.Show("Cadastro realizado com Sucesso");
+            MessageBox.Show("Cadastro realizado com Sucesso!");
         }
 
         private void btn_inserir_classe_Click(object sender, EventArgs e)
         {
             crud.Insert_classe(txt_nome_classe.Text, Convert.ToInt32(txt_for_classe.Text), Convert.ToInt32(txt_vitalidade_classe.Text), Convert.ToInt32(txt_magia_classe.Text), Convert.ToInt32(txt_aura_classe.Text), Convert.ToInt32(txt_foco_classe.Text), Convert.ToInt32(txt_velocidade_classe.Text), txt_descricao_classe.Text, Convert.ToInt32(txt_prec_classe.Text));
-            MessageBox.Show("Cadastro realizado com Sucesso");
+            MessageBox.Show("Cadastro realizado com Sucesso!");
+        }
+
+        private void btnCadastrarPericia_Click(object sender, EventArgs e)
+        {
+            crud.Insert_pericia(txtNomePericia.Text, txtDescPericia.Text);
+            MessageBox.Show("Cadastro realizado com Sucesso!");
+            txtDescPericia.Text = "";
+            txtNomePericia.Text = "";
+            txtNomePericia.Focus();
         }
     }
 }

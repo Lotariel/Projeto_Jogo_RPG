@@ -103,6 +103,13 @@ namespace Projeto_Jogo_RPG.Classes
             FecharConexao();
         }
 
-
+        public void Insert_pericia(string nome, string descricao)
+        {
+            SqlCommand insert = new SqlCommand("INSERT INTO [dbo].[pericias]([NOME],[DESCRICAO]) VALUES(@nome,@desc)", AbrirConexao());
+            insert.Parameters.Add(new SqlParameter("nome", nome));
+            insert.Parameters.Add(new SqlParameter("desc", descricao));
+            insert.ExecuteNonQuery();
+            FecharConexao();
+        }
     }
 }
