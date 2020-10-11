@@ -111,5 +111,15 @@ namespace Projeto_Jogo_RPG.Classes
             insert.ExecuteNonQuery();
             FecharConexao();
         }
+        //Método de inserção dos dados da janela Itens
+        public void Insert_itens(string nome, string tipo, int preco, string descricao) {
+            SqlCommand insert = new SqlCommand("INSERT INTO [dbo].[itens]([NOME],[TIPO],[PRECO],[DESCRICAO]) VALUES(@nome,@tipo,@preco,@desc)", AbrirConexao());
+            insert.Parameters.Add(new SqlParameter("nome", nome));
+            insert.Parameters.Add(new SqlParameter("tipo", tipo));
+            insert.Parameters.Add(new SqlParameter("preco", preco));
+            insert.Parameters.Add(new SqlParameter("desc", descricao));
+            insert.ExecuteNonQuery();
+            FecharConexao();
+        }
     }
 }

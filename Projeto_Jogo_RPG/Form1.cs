@@ -75,5 +75,16 @@ namespace Projeto_Jogo_RPG
             txtNomePericia.Text = "";
             txtNomePericia.Focus();
         }
+
+        private void txt_TipoItens_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_CadastrarItens_Click(object sender, EventArgs e)
+        {
+            crud.Insert_itens(txt_NomeItens.Text, txt_TipoItens.Text, Convert.ToInt32(txt_PrecoItens), txt_DescricaoItens.Text);
+            MessageBox.Show("Cadastro realizado com Sucesso!");
+        }
     }
 }
