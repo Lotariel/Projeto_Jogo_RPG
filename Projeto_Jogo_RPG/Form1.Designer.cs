@@ -56,9 +56,9 @@
             this.lbl_nome = new System.Windows.Forms.Label();
             this.btn_enviar = new System.Windows.Forms.Button();
             this.tabItens = new System.Windows.Forms.TabPage();
+            this.btn_CadastrarItens = new System.Windows.Forms.Button();
             this.txt_DescricaoItens = new System.Windows.Forms.TextBox();
             this.txt_PrecoItens = new System.Windows.Forms.TextBox();
-            this.txt_TipoItens = new System.Windows.Forms.TextBox();
             this.txt_NomeItens = new System.Windows.Forms.TextBox();
             this.lbl_DescricaoItens = new System.Windows.Forms.Label();
             this.lbl_PrecoItens = new System.Windows.Forms.Label();
@@ -115,7 +115,11 @@
             this.classesTableAdapter = new Projeto_Jogo_RPG.DataSet1TableAdapters.ClassesTableAdapter();
             this.racasTableAdapter = new Projeto_Jogo_RPG.DataSet1TableAdapters.RacasTableAdapter();
             this.racasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.btn_CadastrarItens = new System.Windows.Forms.Button();
+            this.cb_TipoItens = new System.Windows.Forms.ComboBox();
+            this.tabTipo = new System.Windows.Forms.TabPage();
+            this.lbl_NomeTipo = new System.Windows.Forms.Label();
+            this.txt_NomeTipo = new System.Windows.Forms.TextBox();
+            this.btn_CadastrarTipo = new System.Windows.Forms.Button();
             this.tbc_personagem.SuspendLayout();
             this.tabPersonagem.SuspendLayout();
             this.tabItens.SuspendLayout();
@@ -127,6 +131,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.classesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.racasBindingSource1)).BeginInit();
+            this.tabTipo.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbltitulo
@@ -146,6 +151,7 @@
             this.tbc_personagem.Controls.Add(this.tabRaca);
             this.tbc_personagem.Controls.Add(this.tabClasse);
             this.tbc_personagem.Controls.Add(this.tabPericias);
+            this.tbc_personagem.Controls.Add(this.tabTipo);
             this.tbc_personagem.Location = new System.Drawing.Point(18, 82);
             this.tbc_personagem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbc_personagem.Name = "tbc_personagem";
@@ -407,10 +413,10 @@
             // 
             // tabItens
             // 
+            this.tabItens.Controls.Add(this.cb_TipoItens);
             this.tabItens.Controls.Add(this.btn_CadastrarItens);
             this.tabItens.Controls.Add(this.txt_DescricaoItens);
             this.tabItens.Controls.Add(this.txt_PrecoItens);
-            this.tabItens.Controls.Add(this.txt_TipoItens);
             this.tabItens.Controls.Add(this.txt_NomeItens);
             this.tabItens.Controls.Add(this.lbl_DescricaoItens);
             this.tabItens.Controls.Add(this.lbl_PrecoItens);
@@ -424,6 +430,17 @@
             this.tabItens.TabIndex = 1;
             this.tabItens.Text = "Itens";
             this.tabItens.UseVisualStyleBackColor = true;
+            // 
+            // btn_CadastrarItens
+            // 
+            this.btn_CadastrarItens.Location = new System.Drawing.Point(985, 808);
+            this.btn_CadastrarItens.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_CadastrarItens.Name = "btn_CadastrarItens";
+            this.btn_CadastrarItens.Size = new System.Drawing.Size(112, 35);
+            this.btn_CadastrarItens.TabIndex = 19;
+            this.btn_CadastrarItens.Text = "Cadastrar";
+            this.btn_CadastrarItens.UseVisualStyleBackColor = true;
+            this.btn_CadastrarItens.Click += new System.EventHandler(this.btn_CadastrarItens_Click);
             // 
             // txt_DescricaoItens
             // 
@@ -443,16 +460,6 @@
             this.txt_PrecoItens.Name = "txt_PrecoItens";
             this.txt_PrecoItens.Size = new System.Drawing.Size(148, 26);
             this.txt_PrecoItens.TabIndex = 11;
-            // 
-            // txt_TipoItens
-            // 
-            this.txt_TipoItens.AcceptsTab = true;
-            this.txt_TipoItens.Location = new System.Drawing.Point(128, 102);
-            this.txt_TipoItens.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txt_TipoItens.Name = "txt_TipoItens";
-            this.txt_TipoItens.Size = new System.Drawing.Size(148, 26);
-            this.txt_TipoItens.TabIndex = 10;
-            this.txt_TipoItens.TextChanged += new System.EventHandler(this.txt_TipoItens_TextChanged);
             // 
             // txt_NomeItens
             // 
@@ -986,16 +993,56 @@
             this.racasBindingSource1.DataMember = "Racas";
             this.racasBindingSource1.DataSource = this.dataSet1BindingSource;
             // 
-            // btn_CadastrarItens
+            // cb_TipoItens
             // 
-            this.btn_CadastrarItens.Location = new System.Drawing.Point(985, 808);
-            this.btn_CadastrarItens.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btn_CadastrarItens.Name = "btn_CadastrarItens";
-            this.btn_CadastrarItens.Size = new System.Drawing.Size(112, 35);
-            this.btn_CadastrarItens.TabIndex = 19;
-            this.btn_CadastrarItens.Text = "Cadastrar";
-            this.btn_CadastrarItens.UseVisualStyleBackColor = true;
-            this.btn_CadastrarItens.Click += new System.EventHandler(this.btn_CadastrarItens_Click);
+            this.cb_TipoItens.FormattingEnabled = true;
+            this.cb_TipoItens.Items.AddRange(new object[] {
+            "Masculino",
+            "Feminino"});
+            this.cb_TipoItens.Location = new System.Drawing.Point(128, 102);
+            this.cb_TipoItens.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cb_TipoItens.Name = "cb_TipoItens";
+            this.cb_TipoItens.Size = new System.Drawing.Size(148, 28);
+            this.cb_TipoItens.TabIndex = 20;
+            // 
+            // tabTipo
+            // 
+            this.tabTipo.Controls.Add(this.btn_CadastrarTipo);
+            this.tabTipo.Controls.Add(this.txt_NomeTipo);
+            this.tabTipo.Controls.Add(this.lbl_NomeTipo);
+            this.tabTipo.Location = new System.Drawing.Point(4, 29);
+            this.tabTipo.Name = "tabTipo";
+            this.tabTipo.Padding = new System.Windows.Forms.Padding(3);
+            this.tabTipo.Size = new System.Drawing.Size(1156, 889);
+            this.tabTipo.TabIndex = 5;
+            this.tabTipo.Text = "Tipo";
+            this.tabTipo.UseVisualStyleBackColor = true;
+            // 
+            // lbl_NomeTipo
+            // 
+            this.lbl_NomeTipo.AutoSize = true;
+            this.lbl_NomeTipo.Location = new System.Drawing.Point(69, 48);
+            this.lbl_NomeTipo.Name = "lbl_NomeTipo";
+            this.lbl_NomeTipo.Size = new System.Drawing.Size(51, 20);
+            this.lbl_NomeTipo.TabIndex = 0;
+            this.lbl_NomeTipo.Text = "Nome";
+            // 
+            // txt_NomeTipo
+            // 
+            this.txt_NomeTipo.Location = new System.Drawing.Point(153, 45);
+            this.txt_NomeTipo.Name = "txt_NomeTipo";
+            this.txt_NomeTipo.Size = new System.Drawing.Size(100, 26);
+            this.txt_NomeTipo.TabIndex = 1;
+            // 
+            // btn_CadastrarTipo
+            // 
+            this.btn_CadastrarTipo.Location = new System.Drawing.Point(830, 436);
+            this.btn_CadastrarTipo.Name = "btn_CadastrarTipo";
+            this.btn_CadastrarTipo.Size = new System.Drawing.Size(102, 34);
+            this.btn_CadastrarTipo.TabIndex = 2;
+            this.btn_CadastrarTipo.Text = "Cadastrar";
+            this.btn_CadastrarTipo.UseVisualStyleBackColor = true;
+            this.btn_CadastrarTipo.Click += new System.EventHandler(this.btn_CadastrarTipo_Click);
             // 
             // Form1
             // 
@@ -1024,6 +1071,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.classesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.racasBindingSource1)).EndInit();
+            this.tabTipo.ResumeLayout(false);
+            this.tabTipo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1115,13 +1164,17 @@
         private System.Windows.Forms.Button btnCadastrarPericia;
         private System.Windows.Forms.TextBox txt_DescricaoItens;
         private System.Windows.Forms.TextBox txt_PrecoItens;
-        private System.Windows.Forms.TextBox txt_TipoItens;
         private System.Windows.Forms.TextBox txt_NomeItens;
         private System.Windows.Forms.Label lbl_DescricaoItens;
         private System.Windows.Forms.Label lbl_PrecoItens;
         private System.Windows.Forms.Label lbl_TipoItens;
         private System.Windows.Forms.Label lbl_NomeItens;
         private System.Windows.Forms.Button btn_CadastrarItens;
+        private System.Windows.Forms.ComboBox cb_TipoItens;
+        private System.Windows.Forms.TabPage tabTipo;
+        private System.Windows.Forms.Button btn_CadastrarTipo;
+        private System.Windows.Forms.TextBox txt_NomeTipo;
+        private System.Windows.Forms.Label lbl_NomeTipo;
     }
 }
 
