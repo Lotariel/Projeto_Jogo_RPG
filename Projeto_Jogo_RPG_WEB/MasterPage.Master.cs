@@ -38,6 +38,21 @@ namespace Projeto_Jogo_RPG_WEB
 
                 lblNome.Text = crud.select_com_where("personagem", "NOME", "ID_PERSONAGEM", ID);
                 lblSobrenome.Text = crud.select_com_where("personagem", "SOBRENOME", "ID_PERSONAGEM", ID);
+
+                lblNivel.Text = crud.select_com_where("status", "NIVEL", "ID_PERSONAGEM", ID);
+                lblHP_Atual.Text = crud.select_com_where("status", "HP_ATUAL", "ID_PERSONAGEM", ID);
+                lblHP_MAX.Text = crud.select_com_where("status", "HP_MAXIMO", "ID_PERSONAGEM", ID);
+                lblExp_Atual.Text = crud.select_com_where("status", "EXP_ATUAL", "ID_PERSONAGEM", ID);
+                lblMP_Atual.Text = crud.select_com_where("status", "MP_ATUAL", "ID_PERSONAGEM", ID);
+                lblMP_MAX.Text = crud.select_com_where("status", "MP_MAXIMO", "ID_PERSONAGEM", ID);
+
+                //ESTATÍSTICAS
+                lblCDS_Critico.Text = crud.select_com_where("status", "CDS_Critico", "ID_PERSONAGEM", ID);
+                lblDano_Critico.Text = crud.select_com_where("status", "Dano_Critico", "ID_PERSONAGEM", ID);
+                lblQtd_Ataque.Text = crud.select_com_where("status", "QUANTIDADE_ATAQUES", "ID_PERSONAGEM", ID);
+                lblQtd_Acao.Text = crud.select_com_where("status", "QUANTIDADE_ACOES", "ID_PERSONAGEM", ID);
+               // lblEsquiva.Text = crud.select_com_where("status", "", "ID_PERSONAGEM", ID);
+               // lblPrecisao.Text = crud.select_com_where("status", "", "ID_PERSONAGEM", ID);
             }
             catch(IOException erro)
             {

@@ -42,13 +42,13 @@ namespace Projeto_Jogo_RPG_WEB
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// Controle Label2.
+        /// Controle lblNivel.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label lblNivel;
 
         /// <summary>
         /// Controle Label21.
@@ -69,13 +69,13 @@ namespace Projeto_Jogo_RPG_WEB
         protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// Controle Label4.
+        /// Controle lblExp_Atual.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+        protected global::System.Web.UI.WebControls.Label lblExp_Atual;
 
         /// <summary>
         /// Controle Label5.
@@ -87,13 +87,13 @@ namespace Projeto_Jogo_RPG_WEB
         protected global::System.Web.UI.WebControls.Label Label5;
 
         /// <summary>
-        /// Controle Label6.
+        /// Controle lblExp_MAX.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
+        protected global::System.Web.UI.WebControls.Label lblExp_MAX;
 
         /// <summary>
         /// Controle Label7.
@@ -105,13 +105,13 @@ namespace Projeto_Jogo_RPG_WEB
         protected global::System.Web.UI.WebControls.Label Label7;
 
         /// <summary>
-        /// Controle Label8.
+        /// Controle lblHP_Atual.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label8;
+        protected global::System.Web.UI.WebControls.Label lblHP_Atual;
 
         /// <summary>
         /// Controle Label9.
@@ -123,13 +123,13 @@ namespace Projeto_Jogo_RPG_WEB
         protected global::System.Web.UI.WebControls.Label Label9;
 
         /// <summary>
-        /// Controle Label10.
+        /// Controle lblHP_MAX.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label10;
+        protected global::System.Web.UI.WebControls.Label lblHP_MAX;
 
         /// <summary>
         /// Controle Label11.
@@ -141,13 +141,13 @@ namespace Projeto_Jogo_RPG_WEB
         protected global::System.Web.UI.WebControls.Label Label11;
 
         /// <summary>
-        /// Controle Label12.
+        /// Controle lblMP_Atual.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label12;
+        protected global::System.Web.UI.WebControls.Label lblMP_Atual;
 
         /// <summary>
         /// Controle Label13.
@@ -159,13 +159,13 @@ namespace Projeto_Jogo_RPG_WEB
         protected global::System.Web.UI.WebControls.Label Label13;
 
         /// <summary>
-        /// Controle Label14.
+        /// Controle lblMP_MAX.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label14;
+        protected global::System.Web.UI.WebControls.Label lblMP_MAX;
 
         /// <summary>
         /// Controle Label15.
@@ -177,6 +177,15 @@ namespace Projeto_Jogo_RPG_WEB
         protected global::System.Web.UI.WebControls.Label Label15;
 
         /// <summary>
+        /// Controle lblCDS_Critico.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCDS_Critico;
+
+        /// <summary>
         /// Controle Label16.
         /// </summary>
         /// <remarks>
@@ -184,6 +193,15 @@ namespace Projeto_Jogo_RPG_WEB
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label16;
+
+        /// <summary>
+        /// Controle lblDano_Critico.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblDano_Critico;
 
         /// <summary>
         /// Controle Label17.
@@ -195,6 +213,15 @@ namespace Projeto_Jogo_RPG_WEB
         protected global::System.Web.UI.WebControls.Label Label17;
 
         /// <summary>
+        /// Controle lblQtd_Ataque.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblQtd_Ataque;
+
+        /// <summary>
         /// Controle Label18.
         /// </summary>
         /// <remarks>
@@ -202,6 +229,15 @@ namespace Projeto_Jogo_RPG_WEB
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label18;
+
+        /// <summary>
+        /// Controle lblQtd_Acao.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblQtd_Acao;
 
         /// <summary>
         /// Controle Label19.
@@ -213,6 +249,15 @@ namespace Projeto_Jogo_RPG_WEB
         protected global::System.Web.UI.WebControls.Label Label19;
 
         /// <summary>
+        /// Controle lblPrecisao.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPrecisao;
+
+        /// <summary>
         /// Controle Label20.
         /// </summary>
         /// <remarks>
@@ -220,6 +265,15 @@ namespace Projeto_Jogo_RPG_WEB
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label20;
+
+        /// <summary>
+        /// Controle lblEsquiva.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblEsquiva;
 
         /// <summary>
         /// Controle Image1.
