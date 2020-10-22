@@ -43,6 +43,8 @@ namespace Projeto_Jogo_RPG_WEB
                 lblHP_Atual.Text = crud.select_com_where("status", "HP_ATUAL", "ID_PERSONAGEM", ID);
                 lblHP_MAX.Text = crud.select_com_where("status", "HP_MAXIMO", "ID_PERSONAGEM", ID);
                 lblExp_Atual.Text = crud.select_com_where("status", "EXP_ATUAL", "ID_PERSONAGEM", ID);
+                int Exp_Max = Convert.ToInt32(lblNivel.Text);
+                lblExp_MAX.Text = Convert.ToString(Exp_Max * 500);
                 lblMP_Atual.Text = crud.select_com_where("status", "MP_ATUAL", "ID_PERSONAGEM", ID);
                 lblMP_MAX.Text = crud.select_com_where("status", "MP_MAXIMO", "ID_PERSONAGEM", ID);
 
@@ -51,10 +53,21 @@ namespace Projeto_Jogo_RPG_WEB
                 lblDano_Critico.Text = crud.select_com_where("status", "Dano_Critico", "ID_PERSONAGEM", ID);
                 lblQtd_Ataque.Text = crud.select_com_where("status", "QUANTIDADE_ATAQUES", "ID_PERSONAGEM", ID);
                 lblQtd_Acao.Text = crud.select_com_where("status", "QUANTIDADE_ACOES", "ID_PERSONAGEM", ID);
-               // lblEsquiva.Text = crud.select_com_where("status", "", "ID_PERSONAGEM", ID);
-               // lblPrecisao.Text = crud.select_com_where("status", "", "ID_PERSONAGEM", ID);
+                //Esquiva = VELOCIDADE + Nivel do personagem
+                //Ele começa nível 1; Toda vez que a exp_atual for igual o maior que exp_max
+                //O personagem sobe um nível
+                int velocidade = Convert.ToInt32(crud.select_com_where("status", "VELOCIDADE", "ID_PERSONAGEM", ID));
+                int nivelP = Convert.ToInt32(crud.select_com_where("status", "NIVEL", "ID_PERSONAGEM", ID));
+                lblEsquiva.Text = Convert.ToString(velocidade + nivelP);
+
+                //Precisão = 40 + FOCO + PRECISÃO da tabela ARMA
+                int foco = Convert.ToInt32(crud.select_com_where("status", "FOCO", "ID_PERSONAGEM", ID));
+                int id_arma = Convert.ToInt32(crud.select_com_where("Arsenal", "id_ama", "ID_PERSONAGEM", ID));
+                int precisao = Convert.ToInt32(crud.select_com_where("armas", "PRECISAO", "ID_ARMA", Convert.ToString(id_arma)));
+                lblPrecisao.Text = Convert.ToString(foco + precisao + 40);
+
             }
-            catch(IOException erro)
+            catch (IOException erro)
             {
 
             }

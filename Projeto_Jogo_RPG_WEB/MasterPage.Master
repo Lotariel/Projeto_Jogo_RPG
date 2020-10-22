@@ -99,18 +99,18 @@
                                 <td colspan="2" style="background-color:#e3eaeb;" class="titulo">ESTATISCAS</td>
                             </tr>
                             <tr style="background-color:White;">                                
-                                <td class="auto-style9"><asp:Label ID="Label15" runat="server" Text="Label">CDS_Crítico: </asp:Label>
+                                <td class="auto-style9"><asp:Label ID="Label15" runat="server" Text="Label">CDS Crítico: </asp:Label>
 									<asp:Label ID="lblCDS_Critico" runat="server" Text="CDS_ Critico"></asp:Label>
 								</td>
-                                <td class="auto-style8"><asp:Label ID="Label16" runat="server" Text="Label">Dano_Crítico: </asp:Label>
+                                <td class="auto-style8"><asp:Label ID="Label16" runat="server" Text="Label">Dano Crítico: </asp:Label>
 									<asp:Label ID="lblDano_Critico" runat="server" Text="Dano_Critico"></asp:Label>
 								</td>
                             </tr>
                             <tr style="background-color:#E3EAEB;">                                
-                                <td class="auto-style10"><asp:Label ID="Label17" runat="server" Text="Label">Quantidade_Ataques: </asp:Label>
+                                <td class="auto-style10"><asp:Label ID="Label17" runat="server" Text="Label">Quantidade Ataques: </asp:Label>
 									<asp:Label ID="lblQtd_Ataque" runat="server" Text="Qtd_Ataques"></asp:Label>
 								</td>
-                                <td><asp:Label ID="Label18" runat="server" Text="Label">Quantidade_Ações: </asp:Label>
+                                <td><asp:Label ID="Label18" runat="server" Text="Label">Quantidade Ações: </asp:Label>
 									<asp:Label ID="lblQtd_Acao" runat="server" Text="Qtd_Acao"></asp:Label>
 								</td>
                             </tr>
