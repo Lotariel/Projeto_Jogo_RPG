@@ -434,8 +434,6 @@
             // cb_TipoItens
             // 
             this.cb_TipoItens.FormattingEnabled = true;
-            this.cb_TipoItens.Items.AddRange(new object[] {
-            "1"});
             this.cb_TipoItens.Location = new System.Drawing.Point(128, 102);
             this.cb_TipoItens.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cb_TipoItens.Name = "cb_TipoItens";

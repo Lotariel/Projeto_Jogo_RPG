@@ -120,7 +120,8 @@ namespace Projeto_Jogo_RPG.Classes
             insert.Parameters.Add(new SqlParameter("preco", preco));            
             insert.ExecuteNonQuery();
             FecharConexao();
-        }
+        }   
+
         //Método de inserção dos dados da janela Tipos
         public void Insert_tipos(string nome) {
             SqlCommand insert = new SqlCommand("INSERT INTO [dbo].[tipos]([NOME]) VALUES(@nome)", AbrirConexao());
