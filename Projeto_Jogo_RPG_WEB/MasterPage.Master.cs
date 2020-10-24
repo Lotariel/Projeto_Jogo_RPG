@@ -62,7 +62,8 @@ namespace Projeto_Jogo_RPG_WEB
 
                 //Precisão = 40 + FOCO + PRECISÃO da tabela ARMA
                 int foco = Convert.ToInt32(crud.select_com_where("status", "FOCO", "ID_PERSONAGEM", ID));
-                int id_arma = Convert.ToInt32(crud.select_com_where("Arsenal", "id_ama", "ID_PERSONAGEM", ID));
+                //int id_arma = Convert.ToInt32(crud.select_com_where("Arsenal", "id_ama", "ID_PERSONAGEM", ID));
+                int id_arma = 3;
                 int precisao = Convert.ToInt32(crud.select_com_where("armas", "PRECISAO", "ID_ARMA", Convert.ToString(id_arma)));
                 lblPrecisao.Text = Convert.ToString(foco + precisao + 40);
 
