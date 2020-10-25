@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using ClassLibrary1;
 
 
 namespace Projeto_Jogo_RPG
@@ -16,11 +17,15 @@ namespace Projeto_Jogo_RPG
     public partial class Form1 : Form
     {
         private CRUD crud;
-        
+        private Class1 class1;
+
         public Form1()
         {
             InitializeComponent();
             crud = new CRUD();
+            class1 = new Class1();
+            class1.teste();
+            class1.Daniel();
         }
 
         private void label2_Click(object sender, EventArgs e)
