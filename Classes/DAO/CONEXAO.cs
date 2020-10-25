@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 using System.Data.SqlClient;
 
-
-//Clase que abre e fecha a conexão com o Banco de Dados 
-namespace Projeto_Jogo_RPG.Classes
+namespace Classes.DAO
 {
-    public class ConexaoBD
+    public class CONEXAO
     {
-        //Método que abre a conexão com o BD
         public SqlConnection AbrirConexao()
         {
             //Instância de um novo objeto de conexão

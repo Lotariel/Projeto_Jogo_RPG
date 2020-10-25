@@ -88,8 +88,6 @@
     <Compile Include="Bolsa.aspx.designer.cs">
       <DependentUpon>Bolsa.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Classes\ConexaoBD.cs" />
-    <Compile Include="Classes\CRUD.cs" />
     <Compile Include="Ficha.aspx.cs">
       <DependentUpon>Ficha.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -134,9 +132,9 @@
     <Folder Include="Imagens\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary1\ClassLibrary1.csproj">
-      <Project>{8ae929ed-084f-4eda-b69f-50b8be384631}</Project>
-      <Name>ClassLibrary1</Name>
+    <ProjectReference Include="..\Classes\Classes.csproj">
+      <Project>{bb4ef0ef-9f50-413f-8614-4467727c3a53}</Project>
+      <Name>Classes</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

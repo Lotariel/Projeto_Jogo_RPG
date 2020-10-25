@@ -1,13 +1,12 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <UserSecretsId>c5a3cd10-808c-4a74-bd99-d4f5c4b6d2cb</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
     <Folder Include="Model\" />
-    <Folder Include="DAO\" />
-    <Folder Include="Control\" />
     <Folder Include="View\" />
   </ItemGroup>
 

@@ -5,7 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
-using Projeto_Jogo_RPG_WEB.Classes;
+using Classes;
+using Classes.DAO;
 
 namespace Projeto_Jogo_RPG_WEB
 {
