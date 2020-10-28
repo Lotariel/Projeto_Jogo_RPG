@@ -91,8 +91,8 @@ namespace Projeto_Jogo_RPG
 
         private void btn_CadastrarItens_Click(object sender, EventArgs e)
         {
-            crud.Insert_itens(txt_NomeItens.Text, txt_DescricaoItens.Text, Convert.ToInt32(cb_TipoItens.Text), Convert.ToInt32(txt_PrecoItens.Text));
-            MessageBox.Show("Cadastro realizado com Sucesso!");
+            crud.Insert_itens(txt_NomeItens.Text, txt_DescricaoItens.Text, Convert.ToInt32(cb_TipoItens.SelectedValue), Convert.ToInt32(txt_PrecoItens.Text));
+            MessageBox.Show("Cadastro realizado com Sucesso!");            
         }
 
         private void btn_CadastrarTipo_Click(object sender, EventArgs e)
