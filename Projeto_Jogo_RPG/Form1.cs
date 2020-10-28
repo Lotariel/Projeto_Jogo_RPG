@@ -39,24 +39,14 @@ namespace Projeto_Jogo_RPG
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'dataSet2.TIPOS'. Você pode movê-la ou removê-la conforme necessário.
+            this.tIPOSTableAdapter.Fill(this.dataSet2.TIPOS);
             // TODO: esta linha de código carrega dados na tabela 'dataSet1.Racas'. Você pode movê-la ou removê-la conforme necessário.
             //this.racasTableAdapter.Fill(this.dataSet1.Racas);
             // TODO: esta linha de código carrega dados na tabela 'dataSet1.Classes'. Você pode movê-la ou removê-la conforme necessário.
             //this.classesTableAdapter.Fill(this.dataSet1.Classes);
             cmb_classe.Items.Add(crud.select_geral("classes","nome"));
-            cmb_raca.Items.Add(crud.select_geral("racas", "nome"));                   
-
-            SqlConnection AbrirConexao() { SqlConnection conexao = new SqlConnection(@"Data Source=den1.mssql8.gear.host;Password=Sn4ho_Kvnnp-;User ID=pim;Initial Catalog=pim;"); conexao.Open(); return conexao; }
-            SqlConnection FecharConexao() { SqlConnection conexao = new SqlConnection(@"Data Source=den1.mssql8.gear.host;Password=Sn4ho_Kvnnp-;User ID=pim;Initial Catalog=pim;"); conexao.Close(); return conexao; }
-            SqlCommand cmd = new SqlCommand("SELECT * FROM tipos ORDER BY nome", AbrirConexao());
-            SqlDataReader dr = cmd.ExecuteReader();
-
-            //percorre o SqlDataReader para obter os dados
-            while (dr.Read())
-            {
-                //nome da categoria em dr["nome"]
-                cb_TipoItens.Items.Add(dr["nome"]);
-            }
+            cmb_raca.Items.Add(crud.select_geral("racas", "nome"));                               
 
         }
 
