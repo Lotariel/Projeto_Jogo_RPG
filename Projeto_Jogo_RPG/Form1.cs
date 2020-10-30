@@ -39,14 +39,18 @@ namespace Projeto_Jogo_RPG
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'dataSet4.Classes'. Você pode movê-la ou removê-la conforme necessário.
+            this.classesTableAdapter1.Fill(this.dataSet4.Classes);
+            // TODO: esta linha de código carrega dados na tabela 'dataSet3.Racas'. Você pode movê-la ou removê-la conforme necessário.
+            this.racasTableAdapter1.Fill(this.dataSet3.Racas);
             // TODO: esta linha de código carrega dados na tabela 'dataSet2.TIPOS'. Você pode movê-la ou removê-la conforme necessário.
             this.tIPOSTableAdapter.Fill(this.dataSet2.TIPOS);
             // TODO: esta linha de código carrega dados na tabela 'dataSet1.Racas'. Você pode movê-la ou removê-la conforme necessário.
             //this.racasTableAdapter.Fill(this.dataSet1.Racas);
             // TODO: esta linha de código carrega dados na tabela 'dataSet1.Classes'. Você pode movê-la ou removê-la conforme necessário.
             //this.classesTableAdapter.Fill(this.dataSet1.Classes);
-            cmb_classe.Items.Add(crud.select_geral("classes","nome"));
-            cmb_raca.Items.Add(crud.select_geral("racas", "nome"));                               
+            //cmb_classe.Items.Add(crud.select_geral("classes","nome"));
+            //cmb_raca.Items.Add(crud.select_geral("racas", "nome"));                               
 
         }
 
@@ -99,6 +103,19 @@ namespace Projeto_Jogo_RPG
         {
             crud.Insert_tipos(txt_NomeTipo.Text);
             MessageBox.Show("Cadastro realizado com Sucesso!");
+        }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.racasTableAdapter1.FillBy(this.dataSet3.Racas);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

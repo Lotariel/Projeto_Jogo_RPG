@@ -33,6 +33,8 @@
             this.tbc_personagem = new System.Windows.Forms.TabControl();
             this.tabPersonagem = new System.Windows.Forms.TabPage();
             this.cmb_classe = new System.Windows.Forms.ComboBox();
+            this.classesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet4 = new Projeto_Jogo_RPG.DataSet4();
             this.lbl_classe = new System.Windows.Forms.Label();
             this.txt_historia = new System.Windows.Forms.TextBox();
             this.lbl_historia = new System.Windows.Forms.Label();
@@ -45,6 +47,8 @@
             this.txt_olhos = new System.Windows.Forms.TextBox();
             this.lbl_olhos = new System.Windows.Forms.Label();
             this.cmb_raca = new System.Windows.Forms.ComboBox();
+            this.racasBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet3 = new Projeto_Jogo_RPG.DataSet3();
             this.lbl_raca = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lbl_sexo = new System.Windows.Forms.Label();
@@ -57,6 +61,8 @@
             this.btn_enviar = new System.Windows.Forms.Button();
             this.tabItens = new System.Windows.Forms.TabPage();
             this.cb_TipoItens = new System.Windows.Forms.ComboBox();
+            this.tIPOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet2 = new Projeto_Jogo_RPG.DataSet2();
             this.btn_CadastrarItens = new System.Windows.Forms.Button();
             this.txt_DescricaoItens = new System.Windows.Forms.TextBox();
             this.txt_PrecoItens = new System.Windows.Forms.TextBox();
@@ -120,12 +126,20 @@
             this.classesTableAdapter = new Projeto_Jogo_RPG.DataSet1TableAdapters.ClassesTableAdapter();
             this.racasTableAdapter = new Projeto_Jogo_RPG.DataSet1TableAdapters.RacasTableAdapter();
             this.racasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet2 = new Projeto_Jogo_RPG.DataSet2();
-            this.tIPOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tIPOSTableAdapter = new Projeto_Jogo_RPG.DataSet2TableAdapters.TIPOSTableAdapter();
+            this.racasTableAdapter1 = new Projeto_Jogo_RPG.DataSet3TableAdapters.RacasTableAdapter();
+            this.classesTableAdapter1 = new Projeto_Jogo_RPG.DataSet4TableAdapters.ClassesTableAdapter();
+            this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
+            this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.tbc_personagem.SuspendLayout();
             this.tabPersonagem.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.classesBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.racasBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet3)).BeginInit();
             this.tabItens.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tIPOSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).BeginInit();
             this.tabRaca.SuspendLayout();
             this.tabClasse.SuspendLayout();
             this.tabPericias.SuspendLayout();
@@ -135,8 +149,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.classesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.racasBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tIPOSBindingSource)).BeginInit();
+            this.fillByToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbltitulo
@@ -201,12 +214,25 @@
             // 
             // cmb_classe
             // 
+            this.cmb_classe.DataSource = this.classesBindingSource1;
+            this.cmb_classe.DisplayMember = "NOME";
             this.cmb_classe.FormattingEnabled = true;
             this.cmb_classe.Location = new System.Drawing.Point(117, 288);
             this.cmb_classe.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmb_classe.Name = "cmb_classe";
             this.cmb_classe.Size = new System.Drawing.Size(148, 28);
             this.cmb_classe.TabIndex = 22;
+            this.cmb_classe.ValueMember = "ID_CLASSE";
+            // 
+            // classesBindingSource1
+            // 
+            this.classesBindingSource1.DataMember = "Classes";
+            this.classesBindingSource1.DataSource = this.dataSet4;
+            // 
+            // dataSet4
+            // 
+            this.dataSet4.DataSetName = "DataSet4";
+            this.dataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lbl_classe
             // 
@@ -312,12 +338,25 @@
             // 
             // cmb_raca
             // 
+            this.cmb_raca.DataSource = this.racasBindingSource2;
+            this.cmb_raca.DisplayMember = "NOME";
             this.cmb_raca.FormattingEnabled = true;
             this.cmb_raca.Location = new System.Drawing.Point(117, 246);
             this.cmb_raca.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmb_raca.Name = "cmb_raca";
             this.cmb_raca.Size = new System.Drawing.Size(148, 28);
             this.cmb_raca.TabIndex = 10;
+            this.cmb_raca.ValueMember = "ID_RACA";
+            // 
+            // racasBindingSource2
+            // 
+            this.racasBindingSource2.DataMember = "Racas";
+            this.racasBindingSource2.DataSource = this.dataSet3;
+            // 
+            // dataSet3
+            // 
+            this.dataSet3.DataSetName = "DataSet3";
+            this.dataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lbl_raca
             // 
@@ -447,6 +486,16 @@
             this.cb_TipoItens.Size = new System.Drawing.Size(218, 28);
             this.cb_TipoItens.TabIndex = 20;
             this.cb_TipoItens.ValueMember = "ID_TIPO";
+            // 
+            // tIPOSBindingSource
+            // 
+            this.tIPOSBindingSource.DataMember = "TIPOS";
+            this.tIPOSBindingSource.DataSource = this.dataSet2;
+            // 
+            // dataSet2
+            // 
+            this.dataSet2.DataSetName = "DataSet2";
+            this.dataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btn_CadastrarItens
             // 
@@ -984,7 +1033,7 @@
             this.tabTipo.Controls.Add(this.lbl_NomeTipo);
             this.tabTipo.Location = new System.Drawing.Point(4, 29);
             this.tabTipo.Name = "tabTipo";
-            this.tabTipo.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabTipo.Padding = new System.Windows.Forms.Padding(3);
             this.tabTipo.Size = new System.Drawing.Size(1156, 889);
             this.tabTipo.TabIndex = 5;
             this.tabTipo.Text = "Tipo";
@@ -1049,25 +1098,43 @@
             this.racasBindingSource1.DataMember = "Racas";
             this.racasBindingSource1.DataSource = this.dataSet1BindingSource;
             // 
-            // dataSet2
-            // 
-            this.dataSet2.DataSetName = "DataSet2";
-            this.dataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tIPOSBindingSource
-            // 
-            this.tIPOSBindingSource.DataMember = "TIPOS";
-            this.tIPOSBindingSource.DataSource = this.dataSet2;
-            // 
             // tIPOSTableAdapter
             // 
             this.tIPOSTableAdapter.ClearBeforeFill = true;
+            // 
+            // racasTableAdapter1
+            // 
+            this.racasTableAdapter1.ClearBeforeFill = true;
+            // 
+            // classesTableAdapter1
+            // 
+            this.classesTableAdapter1.ClearBeforeFill = true;
+            // 
+            // fillByToolStrip
+            // 
+            this.fillByToolStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.fillByToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fillByToolStripButton});
+            this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.fillByToolStrip.Name = "fillByToolStrip";
+            this.fillByToolStrip.Size = new System.Drawing.Size(1182, 32);
+            this.fillByToolStrip.TabIndex = 2;
+            this.fillByToolStrip.Text = "fillByToolStrip";
+            // 
+            // fillByToolStripButton
+            // 
+            this.fillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.fillByToolStripButton.Name = "fillByToolStripButton";
+            this.fillByToolStripButton.Size = new System.Drawing.Size(56, 29);
+            this.fillByToolStripButton.Text = "FillBy";
+            this.fillByToolStripButton.Click += new System.EventHandler(this.fillByToolStripButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1162, 962);
+            this.ClientSize = new System.Drawing.Size(1182, 1004);
+            this.Controls.Add(this.fillByToolStrip);
             this.Controls.Add(this.tbc_personagem);
             this.Controls.Add(this.lbltitulo);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -1077,8 +1144,14 @@
             this.tbc_personagem.ResumeLayout(false);
             this.tabPersonagem.ResumeLayout(false);
             this.tabPersonagem.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.classesBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.racasBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet3)).EndInit();
             this.tabItens.ResumeLayout(false);
             this.tabItens.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tIPOSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).EndInit();
             this.tabRaca.ResumeLayout(false);
             this.tabRaca.PerformLayout();
             this.tabClasse.ResumeLayout(false);
@@ -1092,8 +1165,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.classesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.racasBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tIPOSBindingSource)).EndInit();
+            this.fillByToolStrip.ResumeLayout(false);
+            this.fillByToolStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1199,6 +1272,14 @@
         private DataSet2 dataSet2;
         private System.Windows.Forms.BindingSource tIPOSBindingSource;
         private DataSet2TableAdapters.TIPOSTableAdapter tIPOSTableAdapter;
+        private DataSet3 dataSet3;
+        private System.Windows.Forms.BindingSource racasBindingSource2;
+        private DataSet3TableAdapters.RacasTableAdapter racasTableAdapter1;
+        private DataSet4 dataSet4;
+        private System.Windows.Forms.BindingSource classesBindingSource1;
+        private DataSet4TableAdapters.ClassesTableAdapter classesTableAdapter1;
+        private System.Windows.Forms.ToolStrip fillByToolStrip;
+        private System.Windows.Forms.ToolStripButton fillByToolStripButton;
     }
 }
 
