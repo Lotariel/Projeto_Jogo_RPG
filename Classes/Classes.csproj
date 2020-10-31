@@ -44,11 +44,16 @@
   <ItemGroup>
     <Compile Include="DAO\CONEXAO.cs" />
     <Compile Include="DAO\CRUD.cs" />
+    <Compile Include="MODEL\Classe.cs" />
+    <Compile Include="MODEL\Itens.cs" />
+    <Compile Include="MODEL\Pericias.cs" />
+    <Compile Include="MODEL\Personagem.cs" />
+    <Compile Include="MODEL\Raca.cs" />
+    <Compile Include="MODEL\Tipos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CONTROL\" />
-    <Folder Include="MODEL\" />
     <Folder Include="VIEW\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
