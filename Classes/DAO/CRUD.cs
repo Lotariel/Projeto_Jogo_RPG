@@ -28,7 +28,7 @@ namespace Classes.DAO
             FecharConexao();
             //Retorno de variável com o resultado do select no BD
             return resultado;
-        }
+        }       
 
         public string select_com_where(string NomeTabela, string NomeColuna, string Filtro, string ValorFiltro)
         {

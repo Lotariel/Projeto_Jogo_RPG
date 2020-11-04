@@ -10,20 +10,28 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using Classes;
 using Classes.DAO;
+using Classes.CONTROL;
+
 
 namespace Projeto_Jogo_RPG
 {
     public partial class Form1 : Form
     {
         private CRUD crud;
-    
+        private Ctr_Tipo tipos;
+        private Ctr_Pericias pericias;
+        private Ctr_Classe classe;
+        private Ctr_Raça raca;
        
 
         public Form1()
         {
             InitializeComponent();
             crud = new CRUD();
-           
+            tipos = new Ctr_Tipo();
+            pericias = new Ctr_Pericias();
+            classe = new Ctr_Classe();
+            raca = new Ctr_Raça();
             
         }
 
@@ -69,23 +77,72 @@ namespace Projeto_Jogo_RPG
 
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
-            crud.Insert_Raca(txt_nome.Text, Convert.ToInt32(txt_focoraca.Text), Convert.ToInt32(txt_vitraca.Text), Convert.ToInt32(txt_magraca.Text), Convert.ToInt32(txt_auraraca.Text), Convert.ToInt32(txt_focoraca.Text), Convert.ToInt32(txt_velraca.Text), txt_descricaoraca.Text.ToString()); ;
+            // Código em MVC
+            raca.Coloca_Model_nome(txt_nome.Text);
+            raca.Coloca_Model_descricao(txt_descricaoraca.Text.ToString());
+            raca.Coloca_Model_forca(Convert.ToInt32(txt_forcaraca.Text));
+            raca.Coloca_Model_vitalidade(Convert.ToInt32(txt_vitraca.Text));
+            raca.Coloca_Model_magia(Convert.ToInt32(txt_magraca.Text));
+            raca.Coloca_Model_aura(Convert.ToInt32(txt_auraraca.Text));
+            raca.Coloca_Model_foco(Convert.ToInt32(txt_focoraca.Text));
+            raca.Coloca_Model_velocidade(Convert.ToInt32(txt_velraca.Text));
+            raca.Coloca_DAO();
             MessageBox.Show("Cadastro realizado com Sucesso!");
+
+            //Código Antigo
+            //crud.Insert_Raca(txt_nome.Text,
+            //Convert.ToInt32(txt_forcaraca.Text),
+            //Convert.ToInt32(txt_vitraca.Text),
+            //Convert.ToInt32(txt_magraca.Text),
+            //Convert.ToInt32(txt_auraraca.Text),
+            //Convert.ToInt32(txt_focoraca.Text),
+            //Convert.ToInt32(txt_velraca.Text),
+            //txt_descricaoraca.Text.ToString()); ;
+            //MessageBox.Show("Cadastro realizado com Sucesso!");
         }
 
         private void btn_inserir_classe_Click(object sender, EventArgs e)
         {
-            crud.Insert_classe(txt_nome_classe.Text, Convert.ToInt32(txt_for_classe.Text), Convert.ToInt32(txt_vitalidade_classe.Text), Convert.ToInt32(txt_magia_classe.Text), Convert.ToInt32(txt_aura_classe.Text), Convert.ToInt32(txt_foco_classe.Text), Convert.ToInt32(txt_velocidade_classe.Text), txt_descricao_classe.Text, Convert.ToInt32(txt_prec_classe.Text));
+            // Código em MVC
+            classe.Coloca_Model_nome(txt_nome_classe.Text);
+            classe.Coloca_Model_forca(Convert.ToInt32(txt_for_classe.Text));
+            classe.Coloca_Model_vitalidade(Convert.ToInt32(txt_vitalidade_classe.Text));
+            classe.Coloca_Model_magia(Convert.ToInt32(txt_magia_classe.Text));
+            classe.Coloca_Model_aura(Convert.ToInt32(txt_aura_classe.Text));
+            classe.Coloca_Model_foco(Convert.ToInt32(txt_foco_classe.Text));
+            classe.Coloca_Model_velocidade(Convert.ToInt32(txt_velocidade_classe.Text));
+            classe.Coloca_Model_descricao(txt_descricao_classe.Text);
+            classe.Coloca_Model_precisao(Convert.ToInt32(txt_prec_classe.Text));
+            classe.Coloca_DAO();
             MessageBox.Show("Cadastro realizado com Sucesso!");
+
+            //Código Antigo
+            //crud.Insert_classe(txt_nome_classe.Text,
+            //Convert.ToInt32(txt_for_classe.Text),
+            //Convert.ToInt32(txt_vitalidade_classe.Text),
+            //Convert.ToInt32(txt_magia_classe.Text),
+            //Convert.ToInt32(txt_aura_classe.Text),
+            //Convert.ToInt32(txt_foco_classe.Text),
+            //Convert.ToInt32(txt_velocidade_classe.Text),
+            //txt_descricao_classe.Text,
+            //Convert.ToInt32(txt_prec_classe.Text));
+            //MessageBox.Show("Cadastro realizado com Sucesso!");
         }
 
         private void btnCadastrarPericia_Click(object sender, EventArgs e)
         {
-            crud.Insert_pericia(txtNomePericia.Text, txtDescPericia.Text);
+            // Código em MVC
+            pericias.Coloca_Model_nome(txtNomePericia.Text);
+            pericias.Coloca_Model_descricao(txtDescPericia.Text);
+            pericias.Coloca_DAO();
             MessageBox.Show("Cadastro realizado com Sucesso!");
-            txtDescPericia.Text = "";
-            txtNomePericia.Text = "";
-            txtNomePericia.Focus();
+
+            //Código Antigo
+            //crud.Insert_pericia(txtNomePericia.Text, txtDescPericia.Text);
+            //MessageBox.Show("Cadastro realizado com Sucesso!");
+            //txtDescPericia.Text = "";
+            //txtNomePericia.Text = "";
+            //txtNomePericia.Focus();
         }
 
         private void txt_TipoItens_TextChanged(object sender, EventArgs e)
@@ -101,8 +158,14 @@ namespace Projeto_Jogo_RPG
 
         private void btn_CadastrarTipo_Click(object sender, EventArgs e)
         {
-            crud.Insert_tipos(txt_NomeTipo.Text);
+            // Código em MVC
+            tipos.Coloca_Model_nome(txt_NomeTipo.Text);
+            tipos.Coloca_DAO();
             MessageBox.Show("Cadastro realizado com Sucesso!");
+
+            // Código Antigo
+            //crud.Insert_tipos(txt_NomeTipo.Text);
+            //MessageBox.Show("Cadastro realizado com Sucesso!");
         }
 
         private void fillByToolStripButton_Click(object sender, EventArgs e)
