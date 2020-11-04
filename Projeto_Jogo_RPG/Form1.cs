@@ -22,7 +22,8 @@ namespace Projeto_Jogo_RPG
         private Ctr_Pericias pericias;
         private Ctr_Classe classe;
         private Ctr_Raça raca;
-       
+        private Ctr_Itens itens;
+        private Ctr_Personagem personagem;
 
         public Form1()
         {
@@ -32,6 +33,8 @@ namespace Projeto_Jogo_RPG
             pericias = new Ctr_Pericias();
             classe = new Ctr_Classe();
             raca = new Ctr_Raça();
+            itens = new Ctr_Itens();
+            personagem = new Ctr_Personagem();
             
         }
 
@@ -42,6 +45,20 @@ namespace Projeto_Jogo_RPG
 
         private void btn_enviar_Click(object sender, EventArgs e)
         {
+            //Código em MVC
+            personagem.Coloca_Modelo_nome(txt_nomePersonagem.Text.ToString());
+            personagem.Coloca_Modelo_sobrenome(txt_sobrenomePersonagem.Text.ToString());
+            personagem.Coloca_Modelo_idade(txt_idadePersonagem.Text.ToString());
+            personagem.Coloca_Modelo_sexo(cb_sexoPersonagem.SelectedItem.ToString());
+            personagem.Coloca_Modelo_raca(Convert.ToInt16(cmb_racaPersonagem.SelectedValue));
+            personagem.Coloca_Modelo_classe(Convert.ToInt16(cmb_classePersonagem.SelectedValue));
+            personagem.Coloca_Modelo_olhos(txt_olhosPersonagem.Text.ToString());
+            personagem.Coloca_Modelo_cabelo(txt_cabeloPersonagem.Text.ToString());
+            personagem.Coloca_Modelo_altura(txt_altuaPersonagem.Text.ToString());
+            personagem.Coloca_Modelo_peso(txt_pesoPersonagem.Text.ToString());
+            personagem.Coloca_Modelo_historia(txt_historiaPersonagem.Text.ToString());
+            personagem.Coloca_DAO();
+            MessageBox.Show("Cadastro realizado com Sucesso!");
 
         }
 
@@ -78,7 +95,7 @@ namespace Projeto_Jogo_RPG
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
             // Código em MVC
-            raca.Coloca_Model_nome(txt_nome.Text);
+            raca.Coloca_Model_nome(txt_nomeraca.Text.ToString());
             raca.Coloca_Model_descricao(txt_descricaoraca.Text.ToString());
             raca.Coloca_Model_forca(Convert.ToInt32(txt_forcaraca.Text));
             raca.Coloca_Model_vitalidade(Convert.ToInt32(txt_vitraca.Text));
@@ -152,8 +169,19 @@ namespace Projeto_Jogo_RPG
 
         private void btn_CadastrarItens_Click(object sender, EventArgs e)
         {
-            crud.Insert_itens(txt_NomeItens.Text, txt_DescricaoItens.Text, Convert.ToInt32(cb_TipoItens.SelectedValue), Convert.ToInt32(txt_PrecoItens.Text));
-            MessageBox.Show("Cadastro realizado com Sucesso!");            
+            // Código em MVC
+            itens.Coloca_Model_nome(txt_NomeItens.Text.ToString());
+            itens.Coloca_Model_descricao(txt_DescricaoItens.Text.ToString());
+            itens.Coloca_Model_tipo(Convert.ToInt32(cb_TipoItens.SelectedValue));
+            itens.Coloca_Model_preco(Convert.ToInt32(txt_PrecoItens.Text));
+            itens.Coloca_DAO();
+            MessageBox.Show("Cadastro realizado com Sucesso!");
+            // Código Antigo
+            //crud.Insert_itens(txt_NomeItens.Text,
+            //txt_DescricaoItens.Text,
+            //Convert.ToInt32(cb_TipoItens.SelectedValue),
+            //Convert.ToInt32(txt_PrecoItens.Text));
+            //MessageBox.Show("Cadastro realizado com Sucesso!");            
         }
 
         private void btn_CadastrarTipo_Click(object sender, EventArgs e)
@@ -178,6 +206,16 @@ namespace Projeto_Jogo_RPG
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
+
+        }
+
+        private void cmb_racaPersonagem_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPersonagem_Click(object sender, EventArgs e)
+        {
 
         }
     }
