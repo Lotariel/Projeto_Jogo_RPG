@@ -55,7 +55,7 @@
                 <tr>
                     <td>&nbsp;</td>
                     <td>
-                        <asp:Button ID="btn_atacar" runat="server" Text="Atacar" />
+                        <asp:Button ID="btn_atacar" runat="server" Text="Atacar" OnClick="btn_atacar_Click" />
                     </td>
                     <td>&nbsp;</td>
                 </tr>
