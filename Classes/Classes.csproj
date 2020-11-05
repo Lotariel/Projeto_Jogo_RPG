@@ -48,6 +48,8 @@
     <Compile Include="CONTROL\Ctr_Personagem.cs" />
     <Compile Include="CONTROL\Ctr_Raça.cs" />
     <Compile Include="CONTROL\Ctr_Tipo.cs" />
+    <Compile Include="CONTROL\Ctr_valorAleatorio.cs" />
+    <Compile Include="DAO\BATALHA.cs" />
     <Compile Include="DAO\CONEXAO.cs" />
     <Compile Include="DAO\CRUD.cs" />
     <Compile Include="MODEL\Classe.cs" />
