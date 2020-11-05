@@ -32,30 +32,30 @@
             this.lbltitulo = new System.Windows.Forms.Label();
             this.tbc_personagem = new System.Windows.Forms.TabControl();
             this.tabPersonagem = new System.Windows.Forms.TabPage();
-            this.cmb_classe = new System.Windows.Forms.ComboBox();
+            this.cmb_classePersonagem = new System.Windows.Forms.ComboBox();
             this.classesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet4 = new Projeto_Jogo_RPG.DataSet4();
             this.lbl_classe = new System.Windows.Forms.Label();
-            this.txt_historia = new System.Windows.Forms.TextBox();
+            this.txt_historiaPersonagem = new System.Windows.Forms.TextBox();
             this.lbl_historia = new System.Windows.Forms.Label();
-            this.txt_altua = new System.Windows.Forms.TextBox();
+            this.txt_altuaPersonagem = new System.Windows.Forms.TextBox();
             this.lbl_altura = new System.Windows.Forms.Label();
             this.lbl_peso = new System.Windows.Forms.Label();
-            this.txt_peso = new System.Windows.Forms.TextBox();
+            this.txt_pesoPersonagem = new System.Windows.Forms.TextBox();
             this.lbl_cabelo = new System.Windows.Forms.Label();
-            this.txt_cabelo = new System.Windows.Forms.TextBox();
-            this.txt_olhos = new System.Windows.Forms.TextBox();
+            this.txt_cabeloPersonagem = new System.Windows.Forms.TextBox();
+            this.txt_olhosPersonagem = new System.Windows.Forms.TextBox();
             this.lbl_olhos = new System.Windows.Forms.Label();
-            this.cmb_raca = new System.Windows.Forms.ComboBox();
+            this.cmb_racaPersonagem = new System.Windows.Forms.ComboBox();
             this.racasBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet3 = new Projeto_Jogo_RPG.DataSet3();
             this.lbl_raca = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cb_sexoPersonagem = new System.Windows.Forms.ComboBox();
             this.lbl_sexo = new System.Windows.Forms.Label();
-            this.txt_idade = new System.Windows.Forms.TextBox();
+            this.txt_idadePersonagem = new System.Windows.Forms.TextBox();
             this.lbl_idade = new System.Windows.Forms.Label();
-            this.txt_sobrenome = new System.Windows.Forms.TextBox();
-            this.txt_nome = new System.Windows.Forms.TextBox();
+            this.txt_sobrenomePersonagem = new System.Windows.Forms.TextBox();
+            this.txt_nomePersonagem = new System.Windows.Forms.TextBox();
             this.lbl_sobrenome = new System.Windows.Forms.Label();
             this.lbl_nome = new System.Windows.Forms.Label();
             this.btn_enviar = new System.Windows.Forms.Button();
@@ -178,26 +178,26 @@
             // 
             // tabPersonagem
             // 
-            this.tabPersonagem.Controls.Add(this.cmb_classe);
+            this.tabPersonagem.Controls.Add(this.cmb_classePersonagem);
             this.tabPersonagem.Controls.Add(this.lbl_classe);
-            this.tabPersonagem.Controls.Add(this.txt_historia);
+            this.tabPersonagem.Controls.Add(this.txt_historiaPersonagem);
             this.tabPersonagem.Controls.Add(this.lbl_historia);
-            this.tabPersonagem.Controls.Add(this.txt_altua);
+            this.tabPersonagem.Controls.Add(this.txt_altuaPersonagem);
             this.tabPersonagem.Controls.Add(this.lbl_altura);
             this.tabPersonagem.Controls.Add(this.lbl_peso);
-            this.tabPersonagem.Controls.Add(this.txt_peso);
+            this.tabPersonagem.Controls.Add(this.txt_pesoPersonagem);
             this.tabPersonagem.Controls.Add(this.lbl_cabelo);
-            this.tabPersonagem.Controls.Add(this.txt_cabelo);
-            this.tabPersonagem.Controls.Add(this.txt_olhos);
+            this.tabPersonagem.Controls.Add(this.txt_cabeloPersonagem);
+            this.tabPersonagem.Controls.Add(this.txt_olhosPersonagem);
             this.tabPersonagem.Controls.Add(this.lbl_olhos);
-            this.tabPersonagem.Controls.Add(this.cmb_raca);
+            this.tabPersonagem.Controls.Add(this.cmb_racaPersonagem);
             this.tabPersonagem.Controls.Add(this.lbl_raca);
-            this.tabPersonagem.Controls.Add(this.comboBox1);
+            this.tabPersonagem.Controls.Add(this.cb_sexoPersonagem);
             this.tabPersonagem.Controls.Add(this.lbl_sexo);
-            this.tabPersonagem.Controls.Add(this.txt_idade);
+            this.tabPersonagem.Controls.Add(this.txt_idadePersonagem);
             this.tabPersonagem.Controls.Add(this.lbl_idade);
-            this.tabPersonagem.Controls.Add(this.txt_sobrenome);
-            this.tabPersonagem.Controls.Add(this.txt_nome);
+            this.tabPersonagem.Controls.Add(this.txt_sobrenomePersonagem);
+            this.tabPersonagem.Controls.Add(this.txt_nomePersonagem);
             this.tabPersonagem.Controls.Add(this.lbl_sobrenome);
             this.tabPersonagem.Controls.Add(this.lbl_nome);
             this.tabPersonagem.Controls.Add(this.btn_enviar);
@@ -208,9 +208,11 @@
             this.tabPersonagem.TabIndex = 0;
             this.tabPersonagem.Text = "Personagem";
             this.tabPersonagem.UseVisualStyleBackColor = true;
+            this.tabPersonagem.Click += new System.EventHandler(this.tabPersonagem_Click);
             // 
-            // cmb_classe
+            // cmb_classePersonagem
             // 
+<<<<<<< HEAD
             this.cmb_classe.DataSource = this.classesBindingSource1;
             this.cmb_classe.DisplayMember = "NOME";
             this.cmb_classe.FormattingEnabled = true;
@@ -219,6 +221,17 @@
             this.cmb_classe.Size = new System.Drawing.Size(100, 21);
             this.cmb_classe.TabIndex = 22;
             this.cmb_classe.ValueMember = "ID_CLASSE";
+=======
+            this.cmb_classePersonagem.DataSource = this.classesBindingSource1;
+            this.cmb_classePersonagem.DisplayMember = "NOME";
+            this.cmb_classePersonagem.FormattingEnabled = true;
+            this.cmb_classePersonagem.Location = new System.Drawing.Point(117, 288);
+            this.cmb_classePersonagem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmb_classePersonagem.Name = "cmb_classePersonagem";
+            this.cmb_classePersonagem.Size = new System.Drawing.Size(148, 28);
+            this.cmb_classePersonagem.TabIndex = 22;
+            this.cmb_classePersonagem.ValueMember = "ID_CLASSE";
+>>>>>>> 9babf4a548a712417e60d0f3ab4fdd2ad935bc13
             // 
             // classesBindingSource1
             // 
@@ -239,13 +252,22 @@
             this.lbl_classe.TabIndex = 21;
             this.lbl_classe.Text = "Classe";
             // 
-            // txt_historia
+            // txt_historiaPersonagem
             // 
+<<<<<<< HEAD
             this.txt_historia.Location = new System.Drawing.Point(10, 412);
             this.txt_historia.Multiline = true;
             this.txt_historia.Name = "txt_historia";
             this.txt_historia.Size = new System.Drawing.Size(320, 128);
             this.txt_historia.TabIndex = 20;
+=======
+            this.txt_historiaPersonagem.Location = new System.Drawing.Point(15, 634);
+            this.txt_historiaPersonagem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_historiaPersonagem.Multiline = true;
+            this.txt_historiaPersonagem.Name = "txt_historiaPersonagem";
+            this.txt_historiaPersonagem.Size = new System.Drawing.Size(478, 195);
+            this.txt_historiaPersonagem.TabIndex = 20;
+>>>>>>> 9babf4a548a712417e60d0f3ab4fdd2ad935bc13
             // 
             // lbl_historia
             // 
@@ -256,12 +278,20 @@
             this.lbl_historia.TabIndex = 19;
             this.lbl_historia.Text = "Resumo da Historia";
             // 
-            // txt_altua
+            // txt_altuaPersonagem
             // 
+<<<<<<< HEAD
             this.txt_altua.Location = new System.Drawing.Point(78, 350);
             this.txt_altua.Name = "txt_altua";
             this.txt_altua.Size = new System.Drawing.Size(100, 20);
             this.txt_altua.TabIndex = 18;
+=======
+            this.txt_altuaPersonagem.Location = new System.Drawing.Point(117, 538);
+            this.txt_altuaPersonagem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_altuaPersonagem.Name = "txt_altuaPersonagem";
+            this.txt_altuaPersonagem.Size = new System.Drawing.Size(148, 26);
+            this.txt_altuaPersonagem.TabIndex = 18;
+>>>>>>> 9babf4a548a712417e60d0f3ab4fdd2ad935bc13
             // 
             // lbl_altura
             // 
@@ -282,12 +312,20 @@
             this.lbl_peso.Text = "Peso";
             this.lbl_peso.Click += new System.EventHandler(this.label2_Click);
             // 
-            // txt_peso
+            // txt_pesoPersonagem
             // 
+<<<<<<< HEAD
             this.txt_peso.Location = new System.Drawing.Point(78, 306);
             this.txt_peso.Name = "txt_peso";
             this.txt_peso.Size = new System.Drawing.Size(100, 20);
             this.txt_peso.TabIndex = 15;
+=======
+            this.txt_pesoPersonagem.Location = new System.Drawing.Point(117, 471);
+            this.txt_pesoPersonagem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_pesoPersonagem.Name = "txt_pesoPersonagem";
+            this.txt_pesoPersonagem.Size = new System.Drawing.Size(148, 26);
+            this.txt_pesoPersonagem.TabIndex = 15;
+>>>>>>> 9babf4a548a712417e60d0f3ab4fdd2ad935bc13
             // 
             // lbl_cabelo
             // 
@@ -298,19 +336,35 @@
             this.lbl_cabelo.TabIndex = 14;
             this.lbl_cabelo.Text = "Cabelo";
             // 
-            // txt_cabelo
+            // txt_cabeloPersonagem
             // 
+<<<<<<< HEAD
             this.txt_cabelo.Location = new System.Drawing.Point(78, 263);
             this.txt_cabelo.Name = "txt_cabelo";
             this.txt_cabelo.Size = new System.Drawing.Size(100, 20);
             this.txt_cabelo.TabIndex = 13;
+=======
+            this.txt_cabeloPersonagem.Location = new System.Drawing.Point(117, 405);
+            this.txt_cabeloPersonagem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_cabeloPersonagem.Name = "txt_cabeloPersonagem";
+            this.txt_cabeloPersonagem.Size = new System.Drawing.Size(148, 26);
+            this.txt_cabeloPersonagem.TabIndex = 13;
+>>>>>>> 9babf4a548a712417e60d0f3ab4fdd2ad935bc13
             // 
-            // txt_olhos
+            // txt_olhosPersonagem
             // 
+<<<<<<< HEAD
             this.txt_olhos.Location = new System.Drawing.Point(78, 221);
             this.txt_olhos.Name = "txt_olhos";
             this.txt_olhos.Size = new System.Drawing.Size(100, 20);
             this.txt_olhos.TabIndex = 12;
+=======
+            this.txt_olhosPersonagem.Location = new System.Drawing.Point(117, 340);
+            this.txt_olhosPersonagem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_olhosPersonagem.Name = "txt_olhosPersonagem";
+            this.txt_olhosPersonagem.Size = new System.Drawing.Size(148, 26);
+            this.txt_olhosPersonagem.TabIndex = 12;
+>>>>>>> 9babf4a548a712417e60d0f3ab4fdd2ad935bc13
             // 
             // lbl_olhos
             // 
@@ -321,8 +375,9 @@
             this.lbl_olhos.TabIndex = 11;
             this.lbl_olhos.Text = " Olhos";
             // 
-            // cmb_raca
+            // cmb_racaPersonagem
             // 
+<<<<<<< HEAD
             this.cmb_raca.DataSource = this.racasBindingSource2;
             this.cmb_raca.DisplayMember = "NOME";
             this.cmb_raca.FormattingEnabled = true;
@@ -331,6 +386,18 @@
             this.cmb_raca.Size = new System.Drawing.Size(100, 21);
             this.cmb_raca.TabIndex = 10;
             this.cmb_raca.ValueMember = "ID_RACA";
+=======
+            this.cmb_racaPersonagem.DataSource = this.racasBindingSource2;
+            this.cmb_racaPersonagem.DisplayMember = "NOME";
+            this.cmb_racaPersonagem.FormattingEnabled = true;
+            this.cmb_racaPersonagem.Location = new System.Drawing.Point(117, 246);
+            this.cmb_racaPersonagem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmb_racaPersonagem.Name = "cmb_racaPersonagem";
+            this.cmb_racaPersonagem.Size = new System.Drawing.Size(148, 28);
+            this.cmb_racaPersonagem.TabIndex = 10;
+            this.cmb_racaPersonagem.ValueMember = "ID_RACA";
+            this.cmb_racaPersonagem.SelectedIndexChanged += new System.EventHandler(this.cmb_racaPersonagem_SelectedIndexChanged);
+>>>>>>> 9babf4a548a712417e60d0f3ab4fdd2ad935bc13
             // 
             // racasBindingSource2
             // 
@@ -351,16 +418,24 @@
             this.lbl_raca.TabIndex = 9;
             this.lbl_raca.Text = "Raça";
             // 
-            // comboBox1
+            // cb_sexoPersonagem
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cb_sexoPersonagem.FormattingEnabled = true;
+            this.cb_sexoPersonagem.Items.AddRange(new object[] {
             "Masculino",
             "Feminino"});
+<<<<<<< HEAD
             this.comboBox1.Location = new System.Drawing.Point(78, 121);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(100, 21);
             this.comboBox1.TabIndex = 8;
+=======
+            this.cb_sexoPersonagem.Location = new System.Drawing.Point(117, 186);
+            this.cb_sexoPersonagem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cb_sexoPersonagem.Name = "cb_sexoPersonagem";
+            this.cb_sexoPersonagem.Size = new System.Drawing.Size(148, 28);
+            this.cb_sexoPersonagem.TabIndex = 8;
+>>>>>>> 9babf4a548a712417e60d0f3ab4fdd2ad935bc13
             // 
             // lbl_sexo
             // 
@@ -371,12 +446,20 @@
             this.lbl_sexo.TabIndex = 7;
             this.lbl_sexo.Text = "Sexo";
             // 
-            // txt_idade
+            // txt_idadePersonagem
             // 
+<<<<<<< HEAD
             this.txt_idade.Location = new System.Drawing.Point(78, 89);
             this.txt_idade.Name = "txt_idade";
             this.txt_idade.Size = new System.Drawing.Size(100, 20);
             this.txt_idade.TabIndex = 6;
+=======
+            this.txt_idadePersonagem.Location = new System.Drawing.Point(117, 137);
+            this.txt_idadePersonagem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_idadePersonagem.Name = "txt_idadePersonagem";
+            this.txt_idadePersonagem.Size = new System.Drawing.Size(148, 26);
+            this.txt_idadePersonagem.TabIndex = 6;
+>>>>>>> 9babf4a548a712417e60d0f3ab4fdd2ad935bc13
             // 
             // lbl_idade
             // 
@@ -387,19 +470,35 @@
             this.lbl_idade.TabIndex = 5;
             this.lbl_idade.Text = "Idade";
             // 
-            // txt_sobrenome
+            // txt_sobrenomePersonagem
             // 
+<<<<<<< HEAD
             this.txt_sobrenome.Location = new System.Drawing.Point(78, 51);
             this.txt_sobrenome.Name = "txt_sobrenome";
             this.txt_sobrenome.Size = new System.Drawing.Size(100, 20);
             this.txt_sobrenome.TabIndex = 4;
+=======
+            this.txt_sobrenomePersonagem.Location = new System.Drawing.Point(117, 78);
+            this.txt_sobrenomePersonagem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_sobrenomePersonagem.Name = "txt_sobrenomePersonagem";
+            this.txt_sobrenomePersonagem.Size = new System.Drawing.Size(148, 26);
+            this.txt_sobrenomePersonagem.TabIndex = 4;
+>>>>>>> 9babf4a548a712417e60d0f3ab4fdd2ad935bc13
             // 
-            // txt_nome
+            // txt_nomePersonagem
             // 
+<<<<<<< HEAD
             this.txt_nome.Location = new System.Drawing.Point(78, 16);
             this.txt_nome.Name = "txt_nome";
             this.txt_nome.Size = new System.Drawing.Size(100, 20);
             this.txt_nome.TabIndex = 3;
+=======
+            this.txt_nomePersonagem.Location = new System.Drawing.Point(117, 25);
+            this.txt_nomePersonagem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_nomePersonagem.Name = "txt_nomePersonagem";
+            this.txt_nomePersonagem.Size = new System.Drawing.Size(148, 26);
+            this.txt_nomePersonagem.TabIndex = 3;
+>>>>>>> 9babf4a548a712417e60d0f3ab4fdd2ad935bc13
             // 
             // lbl_sobrenome
             // 
@@ -1108,30 +1207,30 @@
         private System.Windows.Forms.Label lbltitulo;
         private System.Windows.Forms.TabControl tbc_personagem;
         private System.Windows.Forms.TabPage tabPersonagem;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cb_sexoPersonagem;
         private System.Windows.Forms.Label lbl_sexo;
-        private System.Windows.Forms.TextBox txt_idade;
+        private System.Windows.Forms.TextBox txt_idadePersonagem;
         private System.Windows.Forms.Label lbl_idade;
-        private System.Windows.Forms.TextBox txt_sobrenome;
-        private System.Windows.Forms.TextBox txt_nome;
+        private System.Windows.Forms.TextBox txt_sobrenomePersonagem;
+        private System.Windows.Forms.TextBox txt_nomePersonagem;
         private System.Windows.Forms.Label lbl_sobrenome;
         private System.Windows.Forms.Label lbl_nome;
         private System.Windows.Forms.Button btn_enviar;
 
         private System.Windows.Forms.TabPage tabItens;
         private System.Windows.Forms.Label lbl_peso;
-        private System.Windows.Forms.TextBox txt_peso;
+        private System.Windows.Forms.TextBox txt_pesoPersonagem;
         private System.Windows.Forms.Label lbl_cabelo;
-        private System.Windows.Forms.TextBox txt_cabelo;
-        private System.Windows.Forms.TextBox txt_olhos;
+        private System.Windows.Forms.TextBox txt_cabeloPersonagem;
+        private System.Windows.Forms.TextBox txt_olhosPersonagem;
         private System.Windows.Forms.Label lbl_olhos;
-        private System.Windows.Forms.ComboBox cmb_raca;
+        private System.Windows.Forms.ComboBox cmb_racaPersonagem;
         private System.Windows.Forms.Label lbl_raca;
-        private System.Windows.Forms.TextBox txt_altua;
+        private System.Windows.Forms.TextBox txt_altuaPersonagem;
         private System.Windows.Forms.Label lbl_altura;
-        private System.Windows.Forms.TextBox txt_historia;
+        private System.Windows.Forms.TextBox txt_historiaPersonagem;
         private System.Windows.Forms.Label lbl_historia;
-        private System.Windows.Forms.ComboBox cmb_classe;
+        private System.Windows.Forms.ComboBox cmb_classePersonagem;
         private System.Windows.Forms.Label lbl_classe;
         private System.Windows.Forms.BindingSource dataSet1BindingSource;
         private DataSet1 dataSet1;

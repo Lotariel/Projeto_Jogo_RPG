@@ -42,6 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CONTROL\Ctr_Classe.cs" />
+    <Compile Include="CONTROL\Ctr_Itens.cs" />
+    <Compile Include="CONTROL\Ctr_Pericias.cs" />
+    <Compile Include="CONTROL\Ctr_Personagem.cs" />
+    <Compile Include="CONTROL\Ctr_Raça.cs" />
+    <Compile Include="CONTROL\Ctr_Tipo.cs" />
     <Compile Include="DAO\CONEXAO.cs" />
     <Compile Include="DAO\CRUD.cs" />
     <Compile Include="MODEL\Classe.cs" />
@@ -53,7 +59,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CONTROL\" />
     <Folder Include="VIEW\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

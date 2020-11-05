@@ -37,7 +37,12 @@ namespace Projeto_Jogo_RPG_WEB
         }
         public int dano()
         {
-
+            //selecionar a FORÇA do personagem na tabela STATUS
+            int força = Convert.ToInt32(crud.select_com_where("status", "FORCA", "ID_PERSONAGEM", ID));
+            //selecionar o MULTIPLICADOR na tabela ARMAS
+            int multiplicador = Convert.ToInt32(crud.select_com_where("armas", "MULTIPLICADOR", "TIPO", Convert.ToString(1)));
+            //multiplicar a FORÇA pelo MULTIPLICADOR
+            return força * multiplicador;
         }
         protected void Page_Load(object sender, EventArgs e)
         {

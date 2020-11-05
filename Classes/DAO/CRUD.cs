@@ -28,7 +28,7 @@ namespace Classes.DAO
             FecharConexao();
             //Retorno de variável com o resultado do select no BD
             return resultado;
-        }
+        }       
 
         public string select_com_where(string NomeTabela, string NomeColuna, string Filtro, string ValorFiltro)
         {
@@ -146,6 +146,24 @@ namespace Classes.DAO
         {
             SqlCommand insert = new SqlCommand("INSERT INTO [dbo].[tipos]([NOME]) VALUES(@nome)", AbrirConexao());
             insert.Parameters.Add(new SqlParameter("nome", nome));
+            insert.ExecuteNonQuery();
+            FecharConexao();
+        }
+
+        public void Insert_Personagem(string nome, string sobrenome, string idade, string sexo, int raca, int classe, string olhos, string cabelo, string altura, string peso, string historia)
+        {
+            SqlCommand insert = new SqlCommand("INSERT INTO [dbo].[personagem]([NOME],[SOBRENOME],[IDADE],[SEXO],[ID_RACA],[ID_CLASSE],[COR_OLHOS],[COR_CABELO],[ALTURA],[PESO],[HISTORIA]) VALUES(@nome,@sobre,@idade,@sexo,@raca,@classe,@olhos,@cabelo,@altura,@peso,@historia)", AbrirConexao());
+            insert.Parameters.Add(new SqlParameter("nome", nome));
+            insert.Parameters.Add(new SqlParameter("sobre", sobrenome));
+            insert.Parameters.Add(new SqlParameter("idade", idade));
+            insert.Parameters.Add(new SqlParameter("sexo", sexo));
+            insert.Parameters.Add(new SqlParameter("raca", raca));
+            insert.Parameters.Add(new SqlParameter("classe", classe));
+            insert.Parameters.Add(new SqlParameter("olhos", olhos));
+            insert.Parameters.Add(new SqlParameter("cabelo", cabelo));
+            insert.Parameters.Add(new SqlParameter("altura", altura));
+            insert.Parameters.Add(new SqlParameter("peso", peso));
+            insert.Parameters.Add(new SqlParameter("historia", historia));
             insert.ExecuteNonQuery();
             FecharConexao();
         }
