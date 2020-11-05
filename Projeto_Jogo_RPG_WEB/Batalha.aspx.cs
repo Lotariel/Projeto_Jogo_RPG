@@ -35,6 +35,7 @@ namespace Projeto_Jogo_RPG_WEB
 
             return 40 + nivelPersonagem + foco;
         }
+        //metodo que retorna o dano
         public int dano()
         {
             //selecionar a FORÇA do personagem na tabela STATUS
