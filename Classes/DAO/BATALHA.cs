@@ -56,7 +56,9 @@ namespace Classes.DAO
         //e da um update  de valor no HP_ATUAL
         public void HP_ATUAL(int valor, int ID)
         {
-            crud.update_com_where("status", "HP_ATUAL", Convert.ToString(valor * (-1)), "ID_PERSONAGEM", Convert.ToString(ID));
+            int hpAtual = Convert.ToInt32(crud.select_com_where("status", "HP_ATUAL", "ID_PERSONAGEM", Convert.ToString(ID)));
+            hpAtual = hpAtual - valor;
+            crud.update_com_where("status", "HP_ATUAL", Convert.ToString(hpAtual), "ID_PERSONAGEM", Convert.ToString(ID));
         }
 
     }
