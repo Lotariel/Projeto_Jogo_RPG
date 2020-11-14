@@ -64,5 +64,15 @@ namespace Classes.DAO
             crud.update_com_where("status", "HP_ATUAL", Convert.ToString(hpAtual), "ID_PERSONAGEM", Convert.ToString(ID));
         }
 
+        public void MP_ATUAL(int valor, int ID)
+        {
+            int mpAtual = Convert.ToInt32(crud.select_com_where("status", "MP_ATUAL", "ID_PERSONAGEM", Convert.ToString(ID)));
+            if (valor > mpAtual)
+                mpAtual = 0;
+            else
+                mpAtual = mpAtual - valor;
+            crud.update_com_where("status", "MP_ATUAL", Convert.ToString(mpAtual), "ID_PERSONAGEM", Convert.ToString(ID));
+        }
+
     }
 }

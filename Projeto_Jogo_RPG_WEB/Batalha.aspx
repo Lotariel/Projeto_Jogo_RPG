@@ -21,13 +21,13 @@
                 <tr>
                     <td class="auto-style11">
                         <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-                        <asp:Button ID="btn_reduzirHP" runat="server" Text="ReduzirHP" />
-                        <asp:Button ID="btn_reduzirMP" runat="server" Text="ReduzirMP" />
+                        <asp:Button ID="btn_reduzirHP" runat="server" Text="ReduzirHP" OnClick="btn_reduzirHP_Click" />
+                        <asp:Button ID="btn_reduzirMP" runat="server" Text="ReduzirMP" OnClick="btn_reduzirMP_Click" />
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Button ID="btn_iniciativa" runat="server" Text="Iniciativa" />
+                        <asp:Button ID="btn_iniciativa" runat="server" Text="Iniciativa" OnClick="btn_iniciativa_Click" />
                     </td>
                 </tr>
                 <tr>
@@ -73,8 +73,8 @@
             <table style="width:100%;">
                 <tr>
                     <td>
-                        <asp:Button ID="btn_corteduplo" runat="server" Text="Corte Duplo" />
-                        <asp:Button ID="btn_tiroprecisao" runat="server" Text="Tiro de Precisão" />
+                        <asp:Button ID="btn_corteduplo" runat="server" Text="Corte Duplo" OnClick="btn_corteduplo_Click" />
+                        <asp:Button ID="btn_tiroprecisao" runat="server" Text="Tiro de Precisão" Visible="False" />
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -99,8 +99,8 @@
                 <tr>
                     <td>&nbsp;</td>
                     <td>
-                        <asp:Button ID="btn_bolafogo" runat="server" Text="Bola de Fogo" />
-                        <asp:Button ID="btn_espinhogelo" runat="server" Text="Espinho de Gelo" />
+                        <asp:Button ID="btn_bolafogo" runat="server" Text="Bola de Fogo" OnClick="btn_bolafogo_Click" />
+                        <asp:Button ID="btn_espinhogelo" runat="server" Text="Espinho de Gelo" Visible="False" />
                     </td>
                     <td>&nbsp;</td>
                 </tr>
@@ -126,7 +126,7 @@
                 <tr>
                     <td>&nbsp;</td>
                     <td>
-                        <asp:Button ID="btn_esquivar" runat="server" Text="Esquivar" />
+                        <asp:Button ID="btn_esquivar" runat="server" Text="Esquivar" OnClick="btn_esquivar_Click" />
                     </td>
                     <td>&nbsp;</td>
                 </tr>
